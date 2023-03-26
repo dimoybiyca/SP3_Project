@@ -4,19 +4,20 @@
 
 #define BUTTON_H
 
-class Button {
+class Button
+{
 private:
     int pin;
     int previousState;
+    int currentValue;
+    int previousValue;
+    int state;
 
 public:
     Button();
     void init(int pin);
     bool getState();
     bool isChanged();
-    int currentValue;
-    int previousValue;
-    int state;
 };
 
 #endif

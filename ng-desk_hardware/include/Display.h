@@ -1,6 +1,6 @@
 #ifndef DISPLAY_H
 
-#include <Wire.h> 
+#include <Wire.h>
 #include <LiquidCrystal_I2C.h>
 
 #define DISPLAY_H
@@ -13,7 +13,9 @@ private:
 public:
     Display();
     void init();
-    void print(const char * text);
+    LiquidCrystal_I2C getLCD();
+    void print(const char *text);
+    void print(String text);
 };
 
 #endif
