@@ -10,7 +10,7 @@ public class Main {
 
         SerialPort serialPort = new SerialPort("/dev/ttyUSB0");
         try {
-            serialPort.openPort();//Open serial port
+            serialPort.openPort();
             serialPort.setParams(9600, 8, 1, SerialPort.PARITY_NONE);//Set params.
 
             PortReader portReader = new PortReader(serialPort);

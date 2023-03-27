@@ -13,6 +13,8 @@ unsigned long ListenerCnt = millis();
 int joy = 0;
 String list[20];
 int size = 0;
+int offset = 0;
+bool first = true;
 
 void setup()
 {
@@ -41,11 +43,6 @@ void loop()
       else
       {
         display.getLCD().clear();
-        for (int i = 0; i < 2; i++)
-        {
-          display.getLCD().setCursor(0, i);
-          display.print(list[i]);
-        }
 
         Serial.print("0");
       }
@@ -55,20 +52,38 @@ void loop()
     if (current > 900 && joy != 1)
     {
       joy = 1;
+      if (offset < size - 2)
+      {
+        offset = offset + 1;
+      }
     }
     else if (current < 100 && joy != -1)
     {
       joy = -1;
+      if (offset > 0)
+      {
+        offset = offset - 1;
+      }
     }
     else if (current > 400 && current < 600)
     {
       joy = 0;
     }
 
+    if (joy != 0)
+    {
+      display.getLCD().clear();
+      for (int i = offset; i < offset + 2; i++)
+      {
+        display.getLCD().setCursor(0, i - offset);
+        display.print(list[i]);
+      }
+    }
+
     ButtonCnt = millis();
   }
 
-  if (millis() - ListenerCnt > 10000)
+  if (millis() - ListenerCnt > 10000 || first == true)
   {
     Serial.print("900");
     String sizeStr = Serial.readStringUntil(',');
@@ -84,6 +99,6 @@ void loop()
     }
     ListenerCnt = millis();
 
-    delay(1000);
+    first = false;
   }
 }
