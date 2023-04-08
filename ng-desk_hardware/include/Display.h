@@ -10,10 +10,11 @@
 class Display
 {
 private:
-    static Display *display_;
+    static Display *_display;
 
     LiquidCrystal_I2C lcd;
     List *list;
+    StateManager *stateManager;
 
     String firstRow;
     String secondRow;
@@ -27,11 +28,10 @@ private:
 public:
     static Display *getInstance();
 
-    LiquidCrystal_I2C getLCD();
-
     void init();
     void showLogo();
     void showList();
+    void showActive();
 };
 
 #endif

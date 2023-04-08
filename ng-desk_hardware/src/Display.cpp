@@ -1,10 +1,21 @@
 #include "Display.h"
 
-Display *Display::display_ = nullptr;
+Display *Display::_display = nullptr;
+
+Display *Display::getInstance()
+{
+    if (_display == nullptr)
+    {
+        Display::_display = new Display();
+    }
+
+    return Display::_display;
+}
 
 Display::Display() : lcd(LiquidCrystal_I2C(0x27, 16, 2))
 {
     this->list = List::getInstance();
+    this->stateManager = StateManager::getInstance();
 }
 
 void Display::init()
@@ -23,8 +34,17 @@ void Display::showLogo()
 
 void Display::showList()
 {
+    delay(200);
     this->printFirstRow(">" + this->list->getFirstProject());
     this->printSecondRow(this->list->getSecondProject());
+
+    this->stateManager->setListState(State::LIST_ACTUAL);
+}
+
+void Display::showActive()
+{
+    this->printFirstRow("A:" + this->stateManager->getActiveProject());
+    this->secondRow = "";
 }
 
 void Display::print(String text, uint8_t column = 0, uint8_t row = 0)
@@ -50,19 +70,4 @@ void Display::printSecondRow(String text)
         this->print(text, 0, 1);
         secondRow = text;
     }
-}
-
-LiquidCrystal_I2C Display::getLCD()
-{
-    return lcd;
-}
-
-Display *Display::getInstance()
-{
-    if (display_ == nullptr)
-    {
-        Display::display_ = new Display();
-    }
-
-    return Display::display_;
 }
