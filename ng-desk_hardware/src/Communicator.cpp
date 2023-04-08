@@ -1,5 +1,17 @@
 #include "Communicator.h"
 
+Communicator *Communicator::_communicator = nullptr;
+
+Communicator *Communicator::getInstance()
+{
+    if (_communicator == nullptr)
+    {
+        _communicator = new Communicator();
+    }
+
+    return _communicator;
+}
+
 Communicator::Communicator()
 {
     list = List::getInstance();
@@ -29,27 +41,57 @@ void Communicator::establishConnection()
 
 void Communicator::receiveList()
 {
-    if (stateManager->getConnectionState() == State::CONNECTED)
+    Serial.flush();
+    Serial.print(static_cast<int>(Commands::GET_LIST));
+    String sizeStr = Serial.readStringUntil(',');
+
+    if (sizeStr.length() > 0)
     {
-        Serial.flush();
-        Serial.print(static_cast<int>(Commands::GET_LIST));
-        String sizeStr = Serial.readStringUntil(',');
+        int size = sizeStr.toInt();
 
-        if (sizeStr.length() > 0)
+        for (int i = 0; i < size; i++)
         {
-            int size = sizeStr.toInt();
-
-            for (int i = 0; i < size; i++)
-            {
-                arr[i] = Serial.readStringUntil(',');
-            }
-
-            list->setProjects(arr, size);
-            stateManager->setListState(State::LIST_CHANGED);
+            arr[i] = Serial.readStringUntil(',');
         }
-        else
-        {
-            stateManager->setConnectionState(State::DISCONNECTED);
-        }
+
+        list->setProjects(arr, size);
+        stateManager->setListState(State::LIST_CHANGED);
+    }
+    else
+    {
+        stateManager->setConnectionState(State::DISCONNECTED);
+    }
+}
+
+int Communicator::launchProject()
+{
+    Serial.flush();
+    Serial.print(static_cast<int>(Commands::LAUNCH_RPOJECT) + stateManager->getActiveProject());
+    this->stateManager->setProjectState(State::PROJECT_ACTIVE);
+}
+
+int Communicator::rebootProject()
+{
+    Serial.flush();
+    Serial.print(static_cast<int>(Commands::REBOOT_PROJECT));
+}
+
+int Communicator::stopProject()
+{
+    Serial.flush();
+    Serial.print(static_cast<int>(Commands::STOP_PROJECT));
+    this->stateManager->setProjectState(State::PROJECT_SELECTED);
+}
+
+void Communicator::processResponse()
+{
+    int response = Serial.read();
+    if (response == static_cast<int>(Codes::OK))
+    {
+        Serial.println("OK");
+    }
+    else
+    {
+        stateManager->setConnectionState(State::DISCONNECTED);
     }
 }
