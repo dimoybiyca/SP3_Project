@@ -1,50 +1,69 @@
 #include <Arduino.h>
-#include "Init.h"
 #include "Display.h"
+#include "StateManager.h"
+#include "Communicator.h"
 #include "Button.h"
 
-int buttonStartPin = 6;
-int buttonStopPin = 7;
-Display display;
+#define buttonJoyPin 5
+#define buttonStartPin 6
+#define buttonStopPin 7
+
+Display *display;
+StateManager *stateManager;
+
+Communicator communicator;
 Button buttonStart;
 Button buttonStop;
+Button buttonJoy;
+
 unsigned long ButtonCnt = millis();
 unsigned long ListenerCnt = millis();
 int joy = 0;
-String list[20];
 int size = 0;
 int offset = 0;
+
 bool first = true;
+int active = -1;
 
 void setup()
 {
-  initSerial(9600);
-  display = Display();
-  display.init();
+  communicator = Communicator();
+  communicator.initSerial(9600);
+
+  stateManager = StateManager::getInstance();
+
+  display = Display::getInstance();
+  display->init();
 
   buttonStart.init(buttonStartPin);
   buttonStop.init(buttonStopPin);
+  buttonJoy.init(buttonJoyPin);
 }
 
 void loop()
 {
+
+  while (stateManager->getConnectionState() == State::DISCONNECTED)
+  {
+    communicator.establishConnection();
+  }
 
   if (millis() - ButtonCnt > 100)
   {
     if (buttonStop.isChanged())
     {
       bool state = buttonStop.getState();
-      if (state)
+      if (state && active != -1)
       {
-        display.getLCD().clear();
-        display.print("Active");
-        Serial.print("1");
+        Serial.print("lnch" + String(active));
       }
       else
       {
-        display.getLCD().clear();
-
-        Serial.print("0");
+        if (active != -1)
+        {
+          Serial.print("rbt" + String(active));
+          active = -1;
+        }
       }
     }
 
@@ -52,7 +71,7 @@ void loop()
     if (current > 900 && joy != 1)
     {
       joy = 1;
-      if (offset < size - 2)
+      if (offset < size - 1)
       {
         offset = offset + 1;
       }
@@ -70,35 +89,24 @@ void loop()
       joy = 0;
     }
 
-    if (joy != 0)
+    if (joy != 0 || stateManager->getListState() == State::LIST_CHANGED)
     {
-      display.getLCD().clear();
-      for (int i = offset; i < offset + 2; i++)
-      {
-        display.getLCD().setCursor(0, i - offset);
-        display.print(list[i]);
-      }
+      display->showList();
+    }
+
+    if (buttonJoy.isChanged())
+    {
+      active = offset;
     }
 
     ButtonCnt = millis();
   }
 
-  if (millis() - ListenerCnt > 10000 || first == true)
+  if (millis() - ListenerCnt > 60000 || stateManager->getListState() == State::LIST_EMPTHY)
   {
-    Serial.print("900");
-    String sizeStr = Serial.readStringUntil(',');
+    communicator.receiveList();
 
-    if (sizeStr.length() > 0)
-    {
-      size = sizeStr.toInt();
-
-      for (int i = 0; i < size; i++)
-      {
-        list[i] = Serial.readStringUntil(',');
-      }
-    }
     ListenerCnt = millis();
-
     first = false;
   }
 }

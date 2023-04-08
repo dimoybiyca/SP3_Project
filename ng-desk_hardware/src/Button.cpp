@@ -1,10 +1,9 @@
 #include "Button.h"
 
-Button::Button():
-    currentValue(LOW), 
-    previousValue(LOW),
-    previousState(HIGH),
-    state(LOW){}
+Button::Button() : currentValue(LOW),
+                   previousValue(LOW),
+                   previousState(HIGH),
+                   state(LOW) {}
 
 void Button::init(int pin)
 {
@@ -12,14 +11,15 @@ void Button::init(int pin)
     pinMode(pin, INPUT);
 }
 
-bool Button::getState() 
+bool Button::getState()
 {
     currentValue = digitalRead(pin);
 
-    if(currentValue != previousValue) {
+    if (currentValue != previousValue)
+    {
         previousValue = currentValue;
 
-        if(currentValue == LOW)
+        if (currentValue == LOW)
         {
             state = !state;
         }
@@ -32,7 +32,7 @@ bool Button::isChanged()
 {
     this->getState();
 
-    if(state != previousState)
+    if (state != previousState)
     {
         previousState = state;
         return true;

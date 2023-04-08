@@ -1,3 +1,4 @@
+#pragma once
 #ifndef BUTTON_H
 
 #include <Arduino.h>
@@ -8,9 +9,9 @@ class Button
 {
 private:
     int pin;
-    int previousState;
     int currentValue;
     int previousValue;
+    int previousState;
     int state;
 
 public:

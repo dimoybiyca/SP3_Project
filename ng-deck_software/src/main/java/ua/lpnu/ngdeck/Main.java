@@ -1,6 +1,9 @@
 package ua.lpnu.ngdeck;
 
 import jssc.*;
+import ua.lpnu.ngdeck.data.Codes;
+
+import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
@@ -37,13 +40,25 @@ class PortReader implements SerialPortEventListener {
                 String receivedData = serialPort.readString(event.getEventValue());
                 System.out.println("Received response: " + receivedData);
 
-                if(receivedData.equals("1")) {
-                    ProcessBuilder pb = new ProcessBuilder("gnome-terminal");
+                if(receivedData.startsWith("lnch")) {
+                    File project = FilesAnalyzer.findProjects()
+                            .get(Integer.parseInt(receivedData.substring(4)));
+                    ProcessBuilder pb = new ProcessBuilder("ng", "serve");
+                    pb.directory(project);
                     pb.start();
-                } else if (receivedData.equals("900")) {
+                } else if (receivedData.equals("1111")) {
+                    Thread.sleep(100);
+                    try {
+                        serialPort.writeString(String.valueOf(Codes.OK));
+                    } catch (SerialPortException e) {
+                        e.printStackTrace();
+                    }
+                } else if (receivedData.equals("9999")) {
                     new DataSenderThread(serialPort, FilesAnalyzer.getData()).start();
+                } else {
+                    System.out.println("Nothing");
                 }
-            } catch (SerialPortException | IOException ex) {
+            } catch (SerialPortException | IOException | InterruptedException ex) {
                 ex.printStackTrace();
             }
         }
@@ -65,12 +80,15 @@ class DataSenderThread extends Thread {
         try {
             System.out.println(list);
             serialPort.writeString(list.size() + ",");
-
+            System.out.println("Size: "  + list.size());
+            Thread.sleep(100);
             for (String s : list) {
                 serialPort.writeString(s + ",");
             }
         } catch (SerialPortException e) {
             e.printStackTrace();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
         }
     }
 }

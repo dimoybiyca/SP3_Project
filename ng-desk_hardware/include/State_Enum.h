@@ -1,0 +1,15 @@
+#pragma once
+
+enum class State
+{
+    CONNECTED,
+    DISCONNECTED,
+
+    LIST_EMPTHY,
+    LIST_CHANGED,
+    LIST_ACTUAL,
+
+    PROJECT_NONE,
+    PROJECT_SELECTED,
+    PROJECT_ACTIVE
+};
