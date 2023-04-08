@@ -2,7 +2,10 @@
 
 List *List::_list = nullptr;
 
-List::List() {}
+List::List() : offset(0)
+{
+    stateManager = StateManager::getInstance();
+}
 
 List *List::getInstance()
 {
@@ -33,18 +36,22 @@ void List::setProjects(String list[], int size)
     }
 }
 
-void List::incOffset()
-{
-    if (offset < size - 1)
-    {
-        offset = offset + 1;
-    }
-}
-void List::decOffset()
+void List::moveUp()
 {
     if (offset > 0)
     {
         offset = offset - 1;
+        stateManager->setListState(State::LIST_CHANGED);
+        Serial.println(offset);
+    }
+}
+void List::moveDown()
+{
+    if (offset < size - 1)
+    {
+        offset = offset + 1;
+        stateManager->setListState(State::LIST_CHANGED);
+        Serial.println(offset);
     }
 }
 
@@ -56,7 +63,7 @@ String List::getSecondProject()
 {
     if (offset == size - 1)
     {
-        return "";
+        return "===== END =====";
     }
 
     return this->getProject(offset + 1);
