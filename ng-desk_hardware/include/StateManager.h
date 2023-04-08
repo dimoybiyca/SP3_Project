@@ -14,6 +14,7 @@ private:
     State connectionState;
     State listState;
     State projectState;
+    String activeProject;
 
     StateManager();
 
@@ -28,6 +29,9 @@ public:
 
     State getListState();
     void setListState(State listState);
+
+    String getActiveProject();
+    void setActiveProject(String project);
 };
 
 #endif

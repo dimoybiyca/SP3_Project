@@ -14,7 +14,8 @@ StateManager *StateManager::getInstance()
 
 StateManager::StateManager() : connectionState(State::DISCONNECTED),
                                listState(State::LIST_EMPTHY),
-                               projectState(State::PROJECT_NONE) {}
+                               projectState(State::PROJECT_NONE),
+                               activeProject("null") {}
 
 State StateManager::getConnectionState()
 {
@@ -41,4 +42,13 @@ State StateManager::getListState()
 void StateManager::setListState(State listState)
 {
     this->listState = listState;
+}
+
+String StateManager::getActiveProject()
+{
+    return this->activeProject;
+}
+void StateManager::setActiveProject(String project)
+{
+    this->activeProject = project;
 }
