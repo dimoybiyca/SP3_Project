@@ -1,8 +1,8 @@
-#include "Button.h"
+#include "Controls/Button.h"
 
 Button::Button() : currentValue(LOW),
                    previousValue(LOW),
-                   previousState(HIGH),
+                   previousState(LOW),
                    state(LOW) {}
 
 void Button::init(int pin)
