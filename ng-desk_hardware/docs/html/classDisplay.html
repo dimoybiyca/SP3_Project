@@ -73,10 +73,25 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="classDisplay-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Display Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="Display_8h_source.html">Display.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for Display:</div>
+<div class="dyncontent">
+<div class="center"><img src="classDisplay__coll__graph.png" border="0" usemap="#aDisplay_coll__map" alt="Collaboration graph"/></div>
+<map name="aDisplay_coll__map" id="aDisplay_coll__map">
+<area shape="rect" title=" " alt="" coords="53,593,187,817"/>
+<area shape="rect" href="classList.html" title=" " alt="" coords="175,321,321,531"/>
+<area shape="rect" href="classStateManager.html" title=" " alt="" coords="5,5,163,259"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -98,7 +113,69 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a2205e73c0cb2508f6dfbc7d8d8a933cb"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classDisplay.html">Display</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDisplay.html#a2205e73c0cb2508f6dfbc7d8d8a933cb">getInstance</a> ()</td></tr>
 <tr class="memdesc:a2205e73c0cb2508f6dfbc7d8d8a933cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Instance object.  <br /></td></tr>
 <tr class="separator:a2205e73c0cb2508f6dfbc7d8d8a933cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ae972fffea6f7ca1d627ef48c3d841bb3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDisplay.html#ae972fffea6f7ca1d627ef48c3d841bb3">Display</a> ()</td></tr>
+<tr class="memdesc:ae972fffea6f7ca1d627ef48c3d841bb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classDisplay.html">Display</a> object.  <br /></td></tr>
+<tr class="separator:ae972fffea6f7ca1d627ef48c3d841bb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14eaa5f20437f08c27628fc8df353e2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDisplay.html#a14eaa5f20437f08c27628fc8df353e2a">print</a> (String text, uint8_t column, uint8_t row)</td></tr>
+<tr class="memdesc:a14eaa5f20437f08c27628fc8df353e2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">print text on display  <br /></td></tr>
+<tr class="separator:a14eaa5f20437f08c27628fc8df353e2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e01f263a528ee18f037de912d68d0f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDisplay.html#a7e01f263a528ee18f037de912d68d0f6">printFirstRow</a> (String text)</td></tr>
+<tr class="memdesc:a7e01f263a528ee18f037de912d68d0f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">print text on first row of display  <br /></td></tr>
+<tr class="separator:a7e01f263a528ee18f037de912d68d0f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeebf004a33e3fced431b33cf4dc0f0f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDisplay.html#aeebf004a33e3fced431b33cf4dc0f0f7">printSecondRow</a> (String text)</td></tr>
+<tr class="memdesc:aeebf004a33e3fced431b33cf4dc0f0f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">print text on second row of display  <br /></td></tr>
+<tr class="separator:aeebf004a33e3fced431b33cf4dc0f0f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:adbc20e3a10b085b34111e859260dfb67"><td class="memItemLeft" align="right" valign="top">LiquidCrystal_I2C&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDisplay.html#adbc20e3a10b085b34111e859260dfb67">lcd</a></td></tr>
+<tr class="separator:adbc20e3a10b085b34111e859260dfb67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61eb1e5881238d92069a79e7279653f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classList.html">List</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDisplay.html#a61eb1e5881238d92069a79e7279653f4">list</a></td></tr>
+<tr class="separator:a61eb1e5881238d92069a79e7279653f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab87d5c2492f5ba807c60ef762b545d9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classStateManager.html">StateManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDisplay.html#ab87d5c2492f5ba807c60ef762b545d9c">stateManager</a></td></tr>
+<tr class="separator:ab87d5c2492f5ba807c60ef762b545d9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fc974e10b11c066150b1ac90c31cfd4"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDisplay.html#a3fc974e10b11c066150b1ac90c31cfd4">firstRow</a></td></tr>
+<tr class="separator:a3fc974e10b11c066150b1ac90c31cfd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ce40bae3438f214433cd2200a96957e"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDisplay.html#a7ce40bae3438f214433cd2200a96957e">secondRow</a></td></tr>
+<tr class="separator:a7ce40bae3438f214433cd2200a96957e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:af346cceaf18a4ea478cebe0ee61ee78e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classDisplay.html">Display</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDisplay.html#af346cceaf18a4ea478cebe0ee61ee78e">_display</a></td></tr>
+<tr class="separator:af346cceaf18a4ea478cebe0ee61ee78e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ae972fffea6f7ca1d627ef48c3d841bb3" name="ae972fffea6f7ca1d627ef48c3d841bb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae972fffea6f7ca1d627ef48c3d841bb3">&#9670;&#160;</a></span>Display()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Display::Display </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct a new <a class="el" href="classDisplay.html">Display</a> object. </p>
+<p>second row of display which is now on the display  </p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a2205e73c0cb2508f6dfbc7d8d8a933cb" name="a2205e73c0cb2508f6dfbc7d8d8a933cb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2205e73c0cb2508f6dfbc7d8d8a933cb">&#9670;&#160;</a></span>getInstance()</h2>
@@ -145,6 +222,126 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Initialize the display. </p>
 <p>Set the address of display on i2c bus and turn on backlight </p>
+
+</div>
+</div>
+<a id="a14eaa5f20437f08c27628fc8df353e2a" name="a14eaa5f20437f08c27628fc8df353e2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14eaa5f20437f08c27628fc8df353e2a">&#9670;&#160;</a></span>print()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Display::print </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>column</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>row</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>print text on display </p>
+<p>Print String on display on current position </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>text to print </td></tr>
+    <tr><td class="paramname">column</td><td>position where to print by horizontal </td></tr>
+    <tr><td class="paramname">row</td><td>position where to print by vertical </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7e01f263a528ee18f037de912d68d0f6" name="a7e01f263a528ee18f037de912d68d0f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e01f263a528ee18f037de912d68d0f6">&#9670;&#160;</a></span>printFirstRow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Display::printFirstRow </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>text</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>print text on first row of display </p>
+<p>Print text on first row of display. Compare it with cuurent and print only if it is different to prevent redundant blinking </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>text to print on display </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aeebf004a33e3fced431b33cf4dc0f0f7" name="aeebf004a33e3fced431b33cf4dc0f0f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeebf004a33e3fced431b33cf4dc0f0f7">&#9670;&#160;</a></span>printSecondRow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Display::printSecondRow </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>text</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>print text on second row of display </p>
+<p>Print text on first second of display. Compare it with cuurent and print only if it is different to prevent redundant blinking </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>text to print on display </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -203,6 +400,144 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Print logo on display. </p>
 <p><a class="el" href="classDisplay.html">Display</a> hello logo on display while loading and establishing connection </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="af346cceaf18a4ea478cebe0ee61ee78e" name="af346cceaf18a4ea478cebe0ee61ee78e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af346cceaf18a4ea478cebe0ee61ee78e">&#9670;&#160;</a></span>_display</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classDisplay.html">Display</a>* Display::_display</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>static field to store himself for singleton </p>
+
+</div>
+</div>
+<a id="a3fc974e10b11c066150b1ac90c31cfd4" name="a3fc974e10b11c066150b1ac90c31cfd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fc974e10b11c066150b1ac90c31cfd4">&#9670;&#160;</a></span>firstRow</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String Display::firstRow</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>reference to stateManager </p>
+
+</div>
+</div>
+<a id="adbc20e3a10b085b34111e859260dfb67" name="adbc20e3a10b085b34111e859260dfb67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbc20e3a10b085b34111e859260dfb67">&#9670;&#160;</a></span>lcd</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LiquidCrystal_I2C Display::lcd</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>LiquidCrystal_I2C object </p>
+
+</div>
+</div>
+<a id="a61eb1e5881238d92069a79e7279653f4" name="a61eb1e5881238d92069a79e7279653f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61eb1e5881238d92069a79e7279653f4">&#9670;&#160;</a></span>list</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classList.html">List</a>* Display::list</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7ce40bae3438f214433cd2200a96957e" name="a7ce40bae3438f214433cd2200a96957e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ce40bae3438f214433cd2200a96957e">&#9670;&#160;</a></span>secondRow</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String Display::secondRow</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>first row of display which is now on the display </p>
+
+</div>
+</div>
+<a id="ab87d5c2492f5ba807c60ef762b545d9c" name="ab87d5c2492f5ba807c60ef762b545d9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab87d5c2492f5ba807c60ef762b545d9c">&#9670;&#160;</a></span>stateManager</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classStateManager.html">StateManager</a>* Display::stateManager</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>reference to list </p>
 
 </div>
 </div>

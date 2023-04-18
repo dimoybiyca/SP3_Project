@@ -73,14 +73,28 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="classList-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">List Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="List_8h_source.html">List.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for List:</div>
+<div class="dyncontent">
+<div class="center"><img src="classList__coll__graph.png" border="0" usemap="#aList_coll__map" alt="Collaboration graph"/></div>
+<map name="aList_coll__map" id="aList_coll__map">
+<area shape="rect" title=" " alt="" coords="11,321,157,531"/>
+<area shape="rect" href="classStateManager.html" title=" " alt="" coords="5,5,163,259"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af6bd8fb8434257a7b8fbb2c39d1b47e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classList.html#af6bd8fb8434257a7b8fbb2c39d1b47e5">setProjects</a> (String list[], int size)</td></tr>
+<tr class="memitem:af6bd8fb8434257a7b8fbb2c39d1b47e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classList.html#af6bd8fb8434257a7b8fbb2c39d1b47e5">setProjects</a> (String <a class="el" href="classList.html#a3a54107148792a4a59cc2739f264e776">list</a>[], int <a class="el" href="classList.html#ac41719eafdd551f0dcee8f3ce67ececc">size</a>)</td></tr>
 <tr class="memdesc:af6bd8fb8434257a7b8fbb2c39d1b47e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Projects Array.  <br /></td></tr>
 <tr class="separator:af6bd8fb8434257a7b8fbb2c39d1b47e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f61efd34d268c118414eb7f8b4bc877"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classList.html#a5f61efd34d268c118414eb7f8b4bc877">moveUp</a> ()</td></tr>
@@ -101,7 +115,60 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a06da47315ac87008016075b7ba9b8342"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classList.html">List</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classList.html#a06da47315ac87008016075b7ba9b8342">getInstance</a> ()</td></tr>
 <tr class="memdesc:a06da47315ac87008016075b7ba9b8342"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Instance object.  <br /></td></tr>
 <tr class="separator:a06da47315ac87008016075b7ba9b8342"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a64d878a92d11f7c63c70cbe4e7dd4176"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classList.html#a64d878a92d11f7c63c70cbe4e7dd4176">List</a> ()</td></tr>
+<tr class="memdesc:a64d878a92d11f7c63c70cbe4e7dd4176"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classList.html">List</a> object.  <br /></td></tr>
+<tr class="separator:a64d878a92d11f7c63c70cbe4e7dd4176"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad649b8252e4743b658baad59f5b7951d"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classList.html#ad649b8252e4743b658baad59f5b7951d">getProject</a> (int index)</td></tr>
+<tr class="memdesc:ad649b8252e4743b658baad59f5b7951d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Project object.  <br /></td></tr>
+<tr class="separator:ad649b8252e4743b658baad59f5b7951d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a6f974e7ac58560fd457821efae371f04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classStateManager.html">StateManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classList.html#a6f974e7ac58560fd457821efae371f04">stateManager</a></td></tr>
+<tr class="separator:a6f974e7ac58560fd457821efae371f04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac41719eafdd551f0dcee8f3ce67ececc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classList.html#ac41719eafdd551f0dcee8f3ce67ececc">size</a></td></tr>
+<tr class="separator:ac41719eafdd551f0dcee8f3ce67ececc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64a91814693451c914bce69c1fbe3155"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classList.html#a64a91814693451c914bce69c1fbe3155">offset</a></td></tr>
+<tr class="separator:a64a91814693451c914bce69c1fbe3155"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a54107148792a4a59cc2739f264e776"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classList.html#a3a54107148792a4a59cc2739f264e776">list</a> [20]</td></tr>
+<tr class="separator:a3a54107148792a4a59cc2739f264e776"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:ae1e17919da31ea3cdd70d4776e56d2e1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classList.html">List</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classList.html#ae1e17919da31ea3cdd70d4776e56d2e1">_list</a></td></tr>
+<tr class="separator:ae1e17919da31ea3cdd70d4776e56d2e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a64d878a92d11f7c63c70cbe4e7dd4176" name="a64d878a92d11f7c63c70cbe4e7dd4176"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64d878a92d11f7c63c70cbe4e7dd4176">&#9670;&#160;</a></span>List()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List::List </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct a new <a class="el" href="classList.html">List</a> object. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="af1a19409c36665c130cded2af6653ede" name="af1a19409c36665c130cded2af6653ede"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af1a19409c36665c130cded2af6653ede">&#9670;&#160;</a></span>getFirstProject()</h2>
@@ -148,6 +215,41 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Get the Instance object. </p>
 <p>Singleton pattern method to get instance of class </p><dl class="section return"><dt>Returns</dt><dd>List* single instance of class <a class="el" href="classList.html">List</a> </dd></dl>
+
+</div>
+</div>
+<a id="ad649b8252e4743b658baad59f5b7951d" name="ad649b8252e4743b658baad59f5b7951d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad649b8252e4743b658baad59f5b7951d">&#9670;&#160;</a></span>getProject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String List::getProject </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the Project object. </p>
+<p>Return the project from list by index </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>index of project in array </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>String project name </dd></dl>
 
 </div>
 </div>
@@ -245,6 +347,122 @@ Static Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ae1e17919da31ea3cdd70d4776e56d2e1" name="ae1e17919da31ea3cdd70d4776e56d2e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1e17919da31ea3cdd70d4776e56d2e1">&#9670;&#160;</a></span>_list</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classList.html">List</a>* List::_list</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>static field to store himself for singleton </p>
+
+</div>
+</div>
+<a id="a3a54107148792a4a59cc2739f264e776" name="a3a54107148792a4a59cc2739f264e776"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a54107148792a4a59cc2739f264e776">&#9670;&#160;</a></span>list</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String List::list[20]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>array of projects </p>
+
+</div>
+</div>
+<a id="a64a91814693451c914bce69c1fbe3155" name="a64a91814693451c914bce69c1fbe3155"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64a91814693451c914bce69c1fbe3155">&#9670;&#160;</a></span>offset</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int List::offset</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>how many projects skip from start to output </p>
+
+</div>
+</div>
+<a id="ac41719eafdd551f0dcee8f3ce67ececc" name="ac41719eafdd551f0dcee8f3ce67ececc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac41719eafdd551f0dcee8f3ce67ececc">&#9670;&#160;</a></span>size</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int List::size</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>amount of projects in array </p>
+
+</div>
+</div>
+<a id="a6f974e7ac58560fd457821efae371f04" name="a6f974e7ac58560fd457821efae371f04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f974e7ac58560fd457821efae371f04">&#9670;&#160;</a></span>stateManager</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classStateManager.html">StateManager</a>* List::stateManager</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>stateManager reference </p>
 
 </div>
 </div>

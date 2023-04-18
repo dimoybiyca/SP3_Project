@@ -1,0 +1,31 @@
+digraph "ButtonsProcessor"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [shape=record,label="{ButtonsProcessor\n||+ ButtonsProcessor()\l+ initButtons()\l+ process()\l- processStartButton()\l- processStopButton()\l}",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [color="grey25",style="solid",label=" -stateManager" ,arrowhead="odiamond"];
+  Node2 [shape=record,label="{StateManager\n||+ getConnectionState()\l+ setConnectionState()\l+ getProjectState()\l+ setProjectState()\l+ getListState()\l+ setListState()\l+ getActiveProject()\l+ setActiveProject()\l+ getInstance()\l- StateManager()\l}",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classStateManager.html",tooltip=" "];
+  Node2 -> Node2 [color="grey25",style="solid",label=" -_stateManager" ,arrowhead="odiamond"];
+  Node3 -> Node2 [color="grey25",style="solid",label=" -connectionState\n-listState\n-projectState" ,arrowhead="odiamond"];
+  Node3 [shape=record,label="{State\n||}",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+  Node4 -> Node2 [color="grey25",style="solid",label=" -activeProject" ,arrowhead="odiamond"];
+  Node4 [shape=record,label="{String\n||}",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+  Node5 -> Node1 [color="grey25",style="solid",label=" -communicator" ,arrowhead="odiamond"];
+  Node5 [shape=record,label="{Communicator\n||+ initSerial()\l+ establishConnection()\l+ checkState()\l+ receiveList()\l+ launchProject()\l+ rebootProject()\l+ stopProject()\l+ getInstance()\l- Communicator()\l- processResponse()\l}",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classCommunicator.html",tooltip=" "];
+  Node5 -> Node5 [color="grey25",style="solid",label=" -_communicator" ,arrowhead="odiamond"];
+  Node2 -> Node5 [color="grey25",style="solid",label=" -stateManager" ,arrowhead="odiamond"];
+  Node6 -> Node5 [color="grey25",style="solid",label=" -list" ,arrowhead="odiamond"];
+  Node6 [shape=record,label="{List\n||+ setProjects()\l+ moveUp()\l+ moveDown()\l+ getFirstProject()\l+ getSecondProject()\l+ getInstance()\l- List()\l- getProject()\l}",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classList.html",tooltip=" "];
+  Node6 -> Node6 [color="grey25",style="solid",label=" -_list" ,arrowhead="odiamond"];
+  Node2 -> Node6 [color="grey25",style="solid",label=" -stateManager" ,arrowhead="odiamond"];
+  Node7 -> Node6 [color="grey25",style="solid",label=" -offset\n-size" ,arrowhead="odiamond"];
+  Node7 [shape=record,label="{int\n||}",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+  Node4 -> Node6 [color="grey25",style="solid",label=" -list" ,arrowhead="odiamond"];
+  Node4 -> Node5 [color="grey25",style="solid",label=" -arr" ,arrowhead="odiamond"];
+  Node6 -> Node1 [color="grey25",style="solid",label=" -list" ,arrowhead="odiamond"];
+  Node8 -> Node1 [color="grey25",style="solid",label=" -startButton\n-stopButton" ,arrowhead="odiamond"];
+  Node8 [shape=record,label="{Button\n||+ Button()\l+ init()\l+ getState()\l+ isChanged()\l}",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classButton.html",tooltip=" "];
+  Node7 -> Node8 [color="grey25",style="solid",label=" -currentValue\n-pin\n-previousState\n-previousValue\n-state" ,arrowhead="odiamond"];
+}

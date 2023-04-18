@@ -1,0 +1,7 @@
+<map id="include/Controls/JoyProcessor.h" name="include/Controls/JoyProcessor.h">
+<area shape="rect" id="node1" title="Handle joystick." alt="" coords="5,5,216,31"/>
+<area shape="rect" id="node2" title=" " alt="" coords="80,225,157,251"/>
+<area shape="rect" id="node3" href="$List_8h.html" title="Contains and manipulate list of projects This class contains an array of Strigns which is an projects..." alt="" coords="117,79,171,104"/>
+<area shape="rect" id="node4" href="$StateManager_8h.html" title="program state manager" alt="" coords="167,152,281,177"/>
+<area shape="rect" id="node5" href="$State__Enum_8h.html" title="Enum of program states." alt="" coords="182,225,287,251"/>
+</map>

@@ -1,0 +1,122 @@
+.TH "ButtonsProcessor" 3 "Sun Apr 9 2023" "ng-deck" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ButtonsProcessor
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBButtonsProcessor\fP ()"
+.br
+.RI "Construct a new Buttons Processor object\&. "
+.ti -1c
+.RI "void \fBinitButtons\fP ()"
+.br
+.RI "Init buttons\&. "
+.ti -1c
+.RI "void \fBprocess\fP ()"
+.br
+.RI "Handles buttons clicks\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBprocessStartButton\fP ()"
+.br
+.RI "Handle start button\&. "
+.ti -1c
+.RI "void \fBprocessStopButton\fP ()"
+.br
+.RI "Handle stop button\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBStateManager\fP * \fBstateManager\fP"
+.br
+.ti -1c
+.RI "\fBCommunicator\fP * \fBcommunicator\fP"
+.br
+.ti -1c
+.RI "\fBList\fP * \fBlist\fP"
+.br
+.ti -1c
+.RI "\fBButton\fP \fBstartButton\fP"
+.br
+.ti -1c
+.RI "\fBButton\fP \fBstopButton\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line \fB19\fP of file \fBButtonsProcessor\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ButtonsProcessor::ButtonsProcessor ()"
+
+.PP
+Construct a new Buttons Processor object\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void ButtonsProcessor::initButtons ()"
+
+.PP
+Init buttons\&. 
+.SS "void ButtonsProcessor::process ()"
+
+.PP
+Handles buttons clicks\&. 
+.SS "void ButtonsProcessor::processStartButton ()\fC [private]\fP"
+
+.PP
+Handle start button\&. private method to reduce amount of code in process method Launch project if there is no active project or reboot active project 
+.PP
+\fBSee also\fP
+.RS 4
+\fBprocess()\fP 
+.RE
+.PP
+
+.SS "void ButtonsProcessor::processStopButton ()\fC [private]\fP"
+
+.PP
+Handle stop button\&. private class to reduce amount of code in process method Stop active project or set project which is on display as active when there is no active project 
+.PP
+\fBSee also\fP
+.RS 4
+\fBprocess()\fP 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBCommunicator\fP* ButtonsProcessor::communicator\fC [private]\fP"
+\fBCommunicator\fP reference 
+.PP
+Definition at line \fB23\fP of file \fBButtonsProcessor\&.h\fP\&.
+.SS "\fBList\fP* ButtonsProcessor::list\fC [private]\fP"
+\fBList\fP reference 
+.PP
+Definition at line \fB24\fP of file \fBButtonsProcessor\&.h\fP\&.
+.SS "\fBButton\fP ButtonsProcessor::startButton\fC [private]\fP"
+First button 
+.PP
+Definition at line \fB25\fP of file \fBButtonsProcessor\&.h\fP\&.
+.SS "\fBStateManager\fP* ButtonsProcessor::stateManager\fC [private]\fP"
+\fBStateManager\fP reference 
+.PP
+Definition at line \fB22\fP of file \fBButtonsProcessor\&.h\fP\&.
+.SS "\fBButton\fP ButtonsProcessor::stopButton\fC [private]\fP"
+Second button 
+.PP
+Definition at line \fB26\fP of file \fBButtonsProcessor\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ng-deck from the source code\&.

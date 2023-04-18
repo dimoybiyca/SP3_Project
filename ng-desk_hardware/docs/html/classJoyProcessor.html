@@ -72,10 +72,24 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classJoyProcessor-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">JoyProcessor Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="JoyProcessor_8h_source.html">JoyProcessor.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for JoyProcessor:</div>
+<div class="dyncontent">
+<div class="center"><img src="classJoyProcessor__coll__graph.png" border="0" usemap="#aJoyProcessor_coll__map" alt="Collaboration graph"/></div>
+<map name="aJoyProcessor_coll__map" id="aJoyProcessor_coll__map">
+<area shape="rect" title=" " alt="" coords="23,593,145,729"/>
+<area shape="rect" href="classList.html" title=" " alt="" coords="11,321,157,531"/>
+<area shape="rect" href="classStateManager.html" title=" " alt="" coords="5,5,163,259"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -85,6 +99,24 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a56f534fb91c4617d7469140361b6ff30"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJoyProcessor.html#a56f534fb91c4617d7469140361b6ff30">process</a> ()</td></tr>
 <tr class="memdesc:a56f534fb91c4617d7469140361b6ff30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle direction of joystick.  <br /></td></tr>
 <tr class="separator:a56f534fb91c4617d7469140361b6ff30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a4c980dd007fc30a43769bcc25b6d6053"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJoyProcessor.html#a4c980dd007fc30a43769bcc25b6d6053">checkState</a> ()</td></tr>
+<tr class="memdesc:a4c980dd007fc30a43769bcc25b6d6053"><td class="mdescLeft">&#160;</td><td class="mdescRight">read and return actual state of joy  <br /></td></tr>
+<tr class="separator:a4c980dd007fc30a43769bcc25b6d6053"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93934072bb77c94c859a3c27cc32f8dd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJoyProcessor.html#a93934072bb77c94c859a3c27cc32f8dd">isChanged</a> ()</td></tr>
+<tr class="memdesc:a93934072bb77c94c859a3c27cc32f8dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">return whether joystic state has changed  <br /></td></tr>
+<tr class="separator:a93934072bb77c94c859a3c27cc32f8dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a2ea9cbf52a350a3b584a1a19323a5a26"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classList.html">List</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJoyProcessor.html#a2ea9cbf52a350a3b584a1a19323a5a26">list</a></td></tr>
+<tr class="separator:a2ea9cbf52a350a3b584a1a19323a5a26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7df8e17a5d76802f777b6fde8155bc72"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJoyProcessor.html#a7df8e17a5d76802f777b6fde8155bc72">joy</a></td></tr>
+<tr class="separator:a7df8e17a5d76802f777b6fde8155bc72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f7ed8e3377ce2f1d691d8febc00b06a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJoyProcessor.html#a3f7ed8e3377ce2f1d691d8febc00b06a">previousJoy</a></td></tr>
+<tr class="separator:a3f7ed8e3377ce2f1d691d8febc00b06a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="af97474eba40f88c82d05487dcda6169b" name="af97474eba40f88c82d05487dcda6169b"></a>
@@ -107,6 +139,68 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a4c980dd007fc30a43769bcc25b6d6053" name="a4c980dd007fc30a43769bcc25b6d6053"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c980dd007fc30a43769bcc25b6d6053">&#9670;&#160;</a></span>checkState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int JoyProcessor::checkState </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>read and return actual state of joy </p>
+<dl class="section return"><dt>Returns</dt><dd>1 if joystick was directed upwards </dd>
+<dd>
+0 if joystick is in the center </dd>
+<dd>
+-1 if joystick was directed downwards </dd></dl>
+
+</div>
+</div>
+<a id="a93934072bb77c94c859a3c27cc32f8dd" name="a93934072bb77c94c859a3c27cc32f8dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93934072bb77c94c859a3c27cc32f8dd">&#9670;&#160;</a></span>isChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool JoyProcessor::isChanged </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>return whether joystic state has changed </p>
+<dl class="section return"><dt>Returns</dt><dd>true if it was changed </dd>
+<dd>
+false if it wasnt changer </dd></dl>
+
+</div>
+</div>
 <a id="a56f534fb91c4617d7469140361b6ff30" name="a56f534fb91c4617d7469140361b6ff30"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a56f534fb91c4617d7469140361b6ff30">&#9670;&#160;</a></span>process()</h2>
 
@@ -123,6 +217,76 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Handle direction of joystick. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a7df8e17a5d76802f777b6fde8155bc72" name="a7df8e17a5d76802f777b6fde8155bc72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7df8e17a5d76802f777b6fde8155bc72">&#9670;&#160;</a></span>joy</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int JoyProcessor::joy</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>current state of joystick 1 - up 0 - center -1 - down </p>
+
+</div>
+</div>
+<a id="a2ea9cbf52a350a3b584a1a19323a5a26" name="a2ea9cbf52a350a3b584a1a19323a5a26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ea9cbf52a350a3b584a1a19323a5a26">&#9670;&#160;</a></span>list</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classList.html">List</a>* JoyProcessor::list</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><a class="el" href="classList.html">List</a> reference </p>
+
+</div>
+</div>
+<a id="a3f7ed8e3377ce2f1d691d8febc00b06a" name="a3f7ed8e3377ce2f1d691d8febc00b06a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f7ed8e3377ce2f1d691d8febc00b06a">&#9670;&#160;</a></span>previousJoy</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int JoyProcessor::previousJoy</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>previous state of joystick </p>
 
 </div>
 </div>

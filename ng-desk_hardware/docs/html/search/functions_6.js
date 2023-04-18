@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['movedown_0',['moveDown',['../classList.html#a15a301b34d32509f3b3e3c25f661d3b4',1,'List']]],
-  ['moveup_1',['moveUp',['../classList.html#a5f61efd34d268c118414eb7f8b4bc877',1,'List']]]
+  ['joyprocessor_0',['JoyProcessor',['../classJoyProcessor.html#af97474eba40f88c82d05487dcda6169b',1,'JoyProcessor']]]
 ];

@@ -1,12 +1,10 @@
 var searchData=
 [
-  ['setactiveproject_0',['setActiveProject',['../classStateManager.html#a783cdac60a699f6080fdb93193c905a2',1,'StateManager']]],
-  ['setconnectionstate_1',['setConnectionState',['../classStateManager.html#ae214e2dc1224054cf0a56b1ed57a22cc',1,'StateManager']]],
-  ['setliststate_2',['setListState',['../classStateManager.html#a28ebc08bc31730d231beaccc253d8a3b',1,'StateManager']]],
-  ['setprojects_3',['setProjects',['../classList.html#af6bd8fb8434257a7b8fbb2c39d1b47e5',1,'List']]],
-  ['setprojectstate_4',['setProjectState',['../classStateManager.html#a74d8a42ae678c5dfd5181c90325cb0b6',1,'StateManager']]],
-  ['showactive_5',['showActive',['../classDisplay.html#a89088e3d2dbab4239632d301223a6700',1,'Display']]],
-  ['showlist_6',['showList',['../classDisplay.html#ac60ac1ea3c1840d0d94774e4d2428826',1,'Display']]],
-  ['showlogo_7',['showLogo',['../classDisplay.html#ac18f5efd9070cf0f4e91a3636568ca08',1,'Display']]],
-  ['stopproject_8',['stopProject',['../classCommunicator.html#a5510be3370d5c1073cf0d9c9d43a3d14',1,'Communicator']]]
+  ['print_0',['print',['../classDisplay.html#a14eaa5f20437f08c27628fc8df353e2a',1,'Display']]],
+  ['printfirstrow_1',['printFirstRow',['../classDisplay.html#a7e01f263a528ee18f037de912d68d0f6',1,'Display']]],
+  ['printsecondrow_2',['printSecondRow',['../classDisplay.html#aeebf004a33e3fced431b33cf4dc0f0f7',1,'Display']]],
+  ['process_3',['process',['../classButtonsProcessor.html#ad977a0d5625dcb6bb3901e92ff3d8204',1,'ButtonsProcessor::process()'],['../classJoyProcessor.html#a56f534fb91c4617d7469140361b6ff30',1,'JoyProcessor::process()']]],
+  ['processresponse_4',['processResponse',['../classCommunicator.html#ac5ee517cc6cdfc54c078f010a1f687f4',1,'Communicator']]],
+  ['processstartbutton_5',['processStartButton',['../classButtonsProcessor.html#a155e901991fdd6e630a7a77e33d47bef',1,'ButtonsProcessor']]],
+  ['processstopbutton_6',['processStopButton',['../classButtonsProcessor.html#a6523e2b1361b02c3bb6b0b48b094c608',1,'ButtonsProcessor']]]
 ];

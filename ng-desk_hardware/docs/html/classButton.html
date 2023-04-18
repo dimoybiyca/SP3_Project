@@ -72,17 +72,28 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classButton-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Button Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="Button_8h_source.html">Button.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for Button:</div>
+<div class="dyncontent">
+<div class="center"><img src="classButton__coll__graph.png" border="0" usemap="#aButton_coll__map" alt="Collaboration graph"/></div>
+<map name="aButton_coll__map" id="aButton_coll__map">
+<area shape="rect" title=" " alt="" coords="5,5,116,185"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a3b36df1ae23c58aedb9e15a713159459"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classButton.html#a3b36df1ae23c58aedb9e15a713159459">Button</a> ()</td></tr>
 <tr class="memdesc:a3b36df1ae23c58aedb9e15a713159459"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classButton.html">Button</a> object.  <br /></td></tr>
 <tr class="separator:a3b36df1ae23c58aedb9e15a713159459"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a332a3202056f332071092dfe4bc81399"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classButton.html#a332a3202056f332071092dfe4bc81399">init</a> (int pin)</td></tr>
+<tr class="memitem:a332a3202056f332071092dfe4bc81399"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classButton.html#a332a3202056f332071092dfe4bc81399">init</a> (int <a class="el" href="classButton.html#a865554067923011b7b24db0ea95c4104">pin</a>)</td></tr>
 <tr class="memdesc:a332a3202056f332071092dfe4bc81399"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize button.  <br /></td></tr>
 <tr class="separator:a332a3202056f332071092dfe4bc81399"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a946d9bb84880931ccf3494d84f0ac73a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classButton.html#a946d9bb84880931ccf3494d84f0ac73a">getState</a> ()</td></tr>
@@ -91,6 +102,19 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4dd2c910862ca5850ac03aafceedf816"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classButton.html#a4dd2c910862ca5850ac03aafceedf816">isChanged</a> ()</td></tr>
 <tr class="memdesc:a4dd2c910862ca5850ac03aafceedf816"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns whether the state of the button has changed  <br /></td></tr>
 <tr class="separator:a4dd2c910862ca5850ac03aafceedf816"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a865554067923011b7b24db0ea95c4104"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classButton.html#a865554067923011b7b24db0ea95c4104">pin</a></td></tr>
+<tr class="separator:a865554067923011b7b24db0ea95c4104"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54019a0380e1327dcc8fb1c7812fc90f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classButton.html#a54019a0380e1327dcc8fb1c7812fc90f">currentValue</a></td></tr>
+<tr class="separator:a54019a0380e1327dcc8fb1c7812fc90f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad370f7ce8a395e31afebfb07ed025eee"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classButton.html#ad370f7ce8a395e31afebfb07ed025eee">previousValue</a></td></tr>
+<tr class="separator:ad370f7ce8a395e31afebfb07ed025eee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b70841a3162ebe59cc029dd13f0d1ba"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classButton.html#a4b70841a3162ebe59cc029dd13f0d1ba">previousState</a></td></tr>
+<tr class="separator:a4b70841a3162ebe59cc029dd13f0d1ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d20912c881b34056603e42919030981"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classButton.html#a5d20912c881b34056603e42919030981">state</a></td></tr>
+<tr class="separator:a5d20912c881b34056603e42919030981"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a3b36df1ae23c58aedb9e15a713159459" name="a3b36df1ae23c58aedb9e15a713159459"></a>
@@ -181,6 +205,121 @@ false if button is deactivated </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>true if button state changed </dd>
 <dd>
 false if button state doesn't changed </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a54019a0380e1327dcc8fb1c7812fc90f" name="a54019a0380e1327dcc8fb1c7812fc90f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54019a0380e1327dcc8fb1c7812fc90f">&#9670;&#160;</a></span>currentValue</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Button::currentValue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>current value of button </p>
+
+</div>
+</div>
+<a id="a865554067923011b7b24db0ea95c4104" name="a865554067923011b7b24db0ea95c4104"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a865554067923011b7b24db0ea95c4104">&#9670;&#160;</a></span>pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Button::pin</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>pin where the button is connected </p>
+
+</div>
+</div>
+<a id="a4b70841a3162ebe59cc029dd13f0d1ba" name="a4b70841a3162ebe59cc029dd13f0d1ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b70841a3162ebe59cc029dd13f0d1ba">&#9670;&#160;</a></span>previousState</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Button::previousState</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>previous state of button </p>
+
+</div>
+</div>
+<a id="ad370f7ce8a395e31afebfb07ed025eee" name="ad370f7ce8a395e31afebfb07ed025eee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad370f7ce8a395e31afebfb07ed025eee">&#9670;&#160;</a></span>previousValue</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Button::previousValue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>previous value of button </p>
+
+</div>
+</div>
+<a id="a5d20912c881b34056603e42919030981" name="a5d20912c881b34056603e42919030981"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d20912c881b34056603e42919030981">&#9670;&#160;</a></span>state</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Button::state</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

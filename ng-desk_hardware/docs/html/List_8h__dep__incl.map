@@ -1,0 +1,7 @@
+<map id="include/List.h" name="include/List.h">
+<area shape="rect" id="node1" title="Contains and manipulate list of projects This class contains an array of Strigns which is an projects..." alt="" coords="249,5,348,31"/>
+<area shape="rect" id="node2" href="$Communicator_8h.html" title="communicate with PC via Serial" alt="" coords="7,79,169,104"/>
+<area shape="rect" id="node4" href="$JoyProcessor_8h.html" title="Handle joystick." alt="" coords="193,79,404,104"/>
+<area shape="rect" id="node5" href="$Display_8h.html" title="Wrapper for Arduino I2C display." alt="" coords="428,79,548,104"/>
+<area shape="rect" id="node3" href="$ButtonsProcessor_8h.html" title="Handle buttons." alt="" coords="5,152,171,192"/>
+</map>

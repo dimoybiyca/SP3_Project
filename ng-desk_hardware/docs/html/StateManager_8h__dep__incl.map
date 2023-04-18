@@ -1,0 +1,8 @@
+<map id="include/StateManager.h" name="include/StateManager.h">
+<area shape="rect" id="node1" title="program state manager" alt="" coords="69,5,227,31"/>
+<area shape="rect" id="node2" href="$Communicator_8h.html" title="communicate with PC via Serial" alt="" coords="67,152,229,177"/>
+<area shape="rect" id="node3" href="$ButtonsProcessor_8h.html" title="Handle buttons." alt="" coords="5,225,171,265"/>
+<area shape="rect" id="node4" href="$List_8h.html" title="Contains and manipulate list of projects This class contains an array of Strigns which is an projects..." alt="" coords="247,79,345,104"/>
+<area shape="rect" id="node5" href="$JoyProcessor_8h.html" title="Handle joystick." alt="" coords="253,152,464,177"/>
+<area shape="rect" id="node6" href="$Display_8h.html" title="Wrapper for Arduino I2C display." alt="" coords="488,152,608,177"/>
+</map>

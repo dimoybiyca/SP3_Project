@@ -73,10 +73,25 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="classCommunicator-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Communicator Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="Communicator_8h_source.html">Communicator.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for Communicator:</div>
+<div class="dyncontent">
+<div class="center"><img src="classCommunicator__coll__graph.png" border="0" usemap="#aCommunicator_coll__map" alt="Collaboration graph"/></div>
+<map name="aCommunicator_coll__map" id="aCommunicator_coll__map">
+<area shape="rect" title=" " alt="" coords="5,593,165,788"/>
+<area shape="rect" href="classStateManager.html" title=" " alt="" coords="7,5,164,259"/>
+<area shape="rect" href="classList.html" title=" " alt="" coords="177,321,322,531"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -86,6 +101,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a533a3a9cc24af61f711e889f78b64014"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommunicator.html#a533a3a9cc24af61f711e889f78b64014">establishConnection</a> ()</td></tr>
 <tr class="memdesc:a533a3a9cc24af61f711e889f78b64014"><td class="mdescLeft">&#160;</td><td class="mdescRight">Establish connection with PC.  <br /></td></tr>
 <tr class="separator:a533a3a9cc24af61f711e889f78b64014"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c048ea7bb268c9c988e4149d471359b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommunicator.html#a1c048ea7bb268c9c988e4149d471359b">checkState</a> ()</td></tr>
+<tr class="memdesc:a1c048ea7bb268c9c988e4149d471359b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the state of Arduino is actual.  <br /></td></tr>
+<tr class="separator:a1c048ea7bb268c9c988e4149d471359b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af36759b0d49aae3eb27aa5fe11dcd4fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommunicator.html#af36759b0d49aae3eb27aa5fe11dcd4fd">receiveList</a> ()</td></tr>
 <tr class="memdesc:af36759b0d49aae3eb27aa5fe11dcd4fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receive list from PC.  <br /></td></tr>
 <tr class="separator:af36759b0d49aae3eb27aa5fe11dcd4fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -104,8 +122,80 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a2a58e51227bc3afb217dda318cfd73c1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classCommunicator.html">Communicator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommunicator.html#a2a58e51227bc3afb217dda318cfd73c1">getInstance</a> ()</td></tr>
 <tr class="memdesc:a2a58e51227bc3afb217dda318cfd73c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Instance object.  <br /></td></tr>
 <tr class="separator:a2a58e51227bc3afb217dda318cfd73c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:abd4c26c6a901e571bc9cfc4259e65de3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommunicator.html#abd4c26c6a901e571bc9cfc4259e65de3">Communicator</a> ()</td></tr>
+<tr class="memdesc:abd4c26c6a901e571bc9cfc4259e65de3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classCommunicator.html">Communicator</a> object.  <br /></td></tr>
+<tr class="separator:abd4c26c6a901e571bc9cfc4259e65de3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5ee517cc6cdfc54c078f010a1f687f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommunicator.html#ac5ee517cc6cdfc54c078f010a1f687f4">processResponse</a> ()</td></tr>
+<tr class="memdesc:ac5ee517cc6cdfc54c078f010a1f687f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">process the response of service  <br /></td></tr>
+<tr class="separator:ac5ee517cc6cdfc54c078f010a1f687f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a9b06f1a3d9b3e785d4af54b79b361067"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classStateManager.html">StateManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommunicator.html#a9b06f1a3d9b3e785d4af54b79b361067">stateManager</a></td></tr>
+<tr class="separator:a9b06f1a3d9b3e785d4af54b79b361067"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a768c7f763959309765e5c96899361003"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classList.html">List</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommunicator.html#a768c7f763959309765e5c96899361003">list</a></td></tr>
+<tr class="separator:a768c7f763959309765e5c96899361003"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad70b3759fea281445b9cc1a41468193e"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommunicator.html#ad70b3759fea281445b9cc1a41468193e">arr</a> [20]</td></tr>
+<tr class="separator:ad70b3759fea281445b9cc1a41468193e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a565889aa172501495df1795a48e105cb"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classCommunicator.html">Communicator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommunicator.html#a565889aa172501495df1795a48e105cb">_communicator</a></td></tr>
+<tr class="separator:a565889aa172501495df1795a48e105cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="abd4c26c6a901e571bc9cfc4259e65de3" name="abd4c26c6a901e571bc9cfc4259e65de3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd4c26c6a901e571bc9cfc4259e65de3">&#9670;&#160;</a></span>Communicator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Communicator::Communicator </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct a new <a class="el" href="classCommunicator.html">Communicator</a> object. </p>
+<p>array of strings which receive from service  </p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a1c048ea7bb268c9c988e4149d471359b" name="a1c048ea7bb268c9c988e4149d471359b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c048ea7bb268c9c988e4149d471359b">&#9670;&#160;</a></span>checkState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Communicator::checkState </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if the state of Arduino is actual. </p>
+<p>Send command to arduino to get know if the state of list or project was changed from external </p>
+
+</div>
+</div>
 <a id="a533a3a9cc24af61f711e889f78b64014" name="a533a3a9cc24af61f711e889f78b64014"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a533a3a9cc24af61f711e889f78b64014">&#9670;&#160;</a></span>establishConnection()</h2>
 
@@ -199,6 +289,33 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ac5ee517cc6cdfc54c078f010a1f687f4" name="ac5ee517cc6cdfc54c078f010a1f687f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5ee517cc6cdfc54c078f010a1f687f4">&#9670;&#160;</a></span>processResponse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Communicator::processResponse </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>process the response of service </p>
+
+</div>
+</div>
 <a id="af44f57e1f433d3ed1ab451541f925038" name="af44f57e1f433d3ed1ab451541f925038"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af44f57e1f433d3ed1ab451541f925038">&#9670;&#160;</a></span>rebootProject()</h2>
 
@@ -256,6 +373,98 @@ Static Public Member Functions</h2></td></tr>
 
 <p>stop active project </p>
 <p>Send command to PC to stop current active project </p><dl class="section return"><dt>Returns</dt><dd>int code of execution </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a565889aa172501495df1795a48e105cb" name="a565889aa172501495df1795a48e105cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a565889aa172501495df1795a48e105cb">&#9670;&#160;</a></span>_communicator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classCommunicator.html">Communicator</a>* Communicator::_communicator</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>static field to store himself for singleton </p>
+
+</div>
+</div>
+<a id="ad70b3759fea281445b9cc1a41468193e" name="ad70b3759fea281445b9cc1a41468193e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad70b3759fea281445b9cc1a41468193e">&#9670;&#160;</a></span>arr</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String Communicator::arr[20]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a768c7f763959309765e5c96899361003" name="a768c7f763959309765e5c96899361003"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a768c7f763959309765e5c96899361003">&#9670;&#160;</a></span>list</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classList.html">List</a>* Communicator::list</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><a class="el" href="classList.html">List</a> reference </p>
+
+</div>
+</div>
+<a id="a9b06f1a3d9b3e785d4af54b79b361067" name="a9b06f1a3d9b3e785d4af54b79b361067"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b06f1a3d9b3e785d4af54b79b361067">&#9670;&#160;</a></span>stateManager</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classStateManager.html">StateManager</a>* Communicator::stateManager</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><a class="el" href="classStateManager.html">StateManager</a> reference </p>
 
 </div>
 </div>

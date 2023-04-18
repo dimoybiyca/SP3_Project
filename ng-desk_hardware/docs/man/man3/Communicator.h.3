@@ -1,0 +1,88 @@
+.TH "include/Communicator.h" 3 "Sun Apr 9 2023" "ng-deck" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/Communicator.h \- communicate with PC via Serial  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBCommunicator\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBCOMMUNICATOR_H\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum class \fBCommands\fP { \fBCHECK_CONNECTION\fP = 1111, \fBLAUNCH_RPOJECT\fP = 2222, \fBREBOOT_PROJECT\fP = 3333, \fBSTOP_PROJECT\fP = 4444, \fBGET_LIST\fP = 9999 }"
+.br
+.RI "Enumeration of commands\&. "
+.ti -1c
+.RI "enum class \fBCodes\fP { \fBOK\fP = 200 }"
+.br
+.RI "Enumeration of codes\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+communicate with PC via Serial 
+
+Class to communicate with service on PC 
+.PP
+Definition in file \fBCommunicator\&.h\fP\&.
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define COMMUNICATOR_H"
+
+.PP
+Definition at line \fB8\fP of file \fBCommunicator\&.h\fP\&.
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum class \fBCodes\fP\fC [strong]\fP"
+
+.PP
+Enumeration of codes\&. Needs to unify on Arduino and Service 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIOK \fP\fP
+.PP
+Definition at line \fB110\fP of file \fBCommunicator\&.h\fP\&.
+.SS "enum class \fBCommands\fP\fC [strong]\fP"
+
+.PP
+Enumeration of commands\&. Needs to unify on Arduino and Service 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fICHECK_CONNECTION \fP\fP
+command to check connection with PC 
+.TP
+\fB\fILAUNCH_RPOJECT \fP\fP
+command to launch project 
+.TP
+\fB\fIREBOOT_PROJECT \fP\fP
+command to reboot active project 
+.TP
+\fB\fISTOP_PROJECT \fP\fP
+command to stop active project 
+.TP
+\fB\fIGET_LIST \fP\fP
+command to get list 
+.PP
+Definition at line \fB96\fP of file \fBCommunicator\&.h\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ng-deck from the source code\&.

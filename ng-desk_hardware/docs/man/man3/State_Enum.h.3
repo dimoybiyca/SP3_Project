@@ -1,0 +1,59 @@
+.TH "include/State_Enum.h" 3 "Sun Apr 9 2023" "ng-deck" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/State_Enum.h \- Enum of program states\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum class \fBState\fP { \fBCONNECTED\fP, \fBDISCONNECTED\fP, \fBLIST_EMPTHY\fP, \fBLIST_CHANGED\fP, \fBLIST_ACTUAL\fP, \fBPROJECT_NONE\fP, \fBPROJECT_SELECTED\fP, \fBPROJECT_ACTIVE\fP }"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Enum of program states\&. 
+
+
+.PP
+Definition in file \fBState_Enum\&.h\fP\&.
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum class \fBState\fP\fC [strong]\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fICONNECTED \fP\fP
+arduino is connected to PC 
+.TP
+\fB\fIDISCONNECTED \fP\fP
+arduino isn't connected to PC 
+.TP
+\fB\fILIST_EMPTHY \fP\fP
+list of projects is empty 
+.TP
+\fB\fILIST_CHANGED \fP\fP
+list was changed and should be printed 
+.TP
+\fB\fILIST_ACTUAL \fP\fP
+list on display is actual 
+.TP
+\fB\fIPROJECT_NONE \fP\fP
+there is no projects selected 
+.TP
+\fB\fIPROJECT_SELECTED \fP\fP
+project selected 
+.TP
+\fB\fIPROJECT_ACTIVE \fP\fP
+project is active 
+.PP
+Definition at line \fB8\fP of file \fBState_Enum\&.h\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ng-deck from the source code\&.

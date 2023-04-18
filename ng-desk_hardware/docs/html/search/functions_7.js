@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['process_0',['process',['../classButtonsProcessor.html#ad977a0d5625dcb6bb3901e92ff3d8204',1,'ButtonsProcessor::process()'],['../classJoyProcessor.html#a56f534fb91c4617d7469140361b6ff30',1,'JoyProcessor::process()']]]
+  ['launchproject_0',['launchProject',['../classCommunicator.html#ad1b8b6be608bba3d1c954e12a76935f9',1,'Communicator']]],
+  ['list_1',['List',['../classList.html#a64d878a92d11f7c63c70cbe4e7dd4176',1,'List']]]
 ];

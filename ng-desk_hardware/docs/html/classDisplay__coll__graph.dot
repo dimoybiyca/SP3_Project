@@ -1,0 +1,26 @@
+digraph "Display"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [shape=record,label="{Display\n||+ init()\l+ showLogo()\l+ showList()\l+ showActive()\l+ getInstance()\l- Display()\l- print()\l- printFirstRow()\l- printSecondRow()\l}",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node1 [color="grey25",style="solid",label=" -_display" ,arrowhead="odiamond"];
+  Node2 -> Node1 [color="grey25",style="solid",label=" -lcd" ,arrowhead="odiamond"];
+  Node2 [shape=record,label="{LiquidCrystal_I2C\n||}",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+  Node3 -> Node1 [color="grey25",style="solid",label=" -list" ,arrowhead="odiamond"];
+  Node3 [shape=record,label="{List\n||+ setProjects()\l+ moveUp()\l+ moveDown()\l+ getFirstProject()\l+ getSecondProject()\l+ getInstance()\l- List()\l- getProject()\l}",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classList.html",tooltip=" "];
+  Node3 -> Node3 [color="grey25",style="solid",label=" -_list" ,arrowhead="odiamond"];
+  Node4 -> Node3 [color="grey25",style="solid",label=" -stateManager" ,arrowhead="odiamond"];
+  Node4 [shape=record,label="{StateManager\n||+ getConnectionState()\l+ setConnectionState()\l+ getProjectState()\l+ setProjectState()\l+ getListState()\l+ setListState()\l+ getActiveProject()\l+ setActiveProject()\l+ getInstance()\l- StateManager()\l}",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classStateManager.html",tooltip=" "];
+  Node4 -> Node4 [color="grey25",style="solid",label=" -_stateManager" ,arrowhead="odiamond"];
+  Node5 -> Node4 [color="grey25",style="solid",label=" -connectionState\n-listState\n-projectState" ,arrowhead="odiamond"];
+  Node5 [shape=record,label="{State\n||}",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+  Node6 -> Node4 [color="grey25",style="solid",label=" -activeProject" ,arrowhead="odiamond"];
+  Node6 [shape=record,label="{String\n||}",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+  Node7 -> Node3 [color="grey25",style="solid",label=" -offset\n-size" ,arrowhead="odiamond"];
+  Node7 [shape=record,label="{int\n||}",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+  Node6 -> Node3 [color="grey25",style="solid",label=" -list" ,arrowhead="odiamond"];
+  Node4 -> Node1 [color="grey25",style="solid",label=" -stateManager" ,arrowhead="odiamond"];
+  Node6 -> Node1 [color="grey25",style="solid",label=" -firstRow\n-secondRow" ,arrowhead="odiamond"];
+}
