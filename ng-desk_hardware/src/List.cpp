@@ -42,7 +42,6 @@ void List::moveUp()
     {
         offset = offset - 1;
         stateManager->setListState(State::LIST_CHANGED);
-        Serial.println(offset);
     }
 }
 void List::moveDown()
@@ -51,7 +50,6 @@ void List::moveDown()
     {
         offset = offset + 1;
         stateManager->setListState(State::LIST_CHANGED);
-        Serial.println(offset);
     }
 }
 

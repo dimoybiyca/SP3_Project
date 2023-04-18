@@ -18,12 +18,10 @@ void ButtonsProcessor::process()
 {
     if (startButton.isChanged())
     {
-        Serial.println("Start");
         this->processStartButton();
     }
     else if (stopButton.isChanged())
     {
-        Serial.println("Stop");
         this->processStopButton();
     }
 }

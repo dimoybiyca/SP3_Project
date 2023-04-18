@@ -27,7 +27,6 @@ void Display::init()
 
 void Display::showLogo()
 {
-    lcd.clear();
     this->printFirstRow("=== ng-deck ===");
     this->printSecondRow("Connecting...");
 }
