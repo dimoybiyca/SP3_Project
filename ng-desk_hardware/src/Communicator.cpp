@@ -39,6 +39,26 @@ void Communicator::establishConnection()
     }
 }
 
+void Communicator::checkState()
+{
+    Serial.flush();
+    Serial.print(static_cast<int>(Commands::CHECK_STATE));
+    String codeStr = Serial.readString();
+
+    if (codeStr.length() > 0)
+    {
+        int code = codeStr.toInt();
+        if (code == static_cast<int>(Codes::WAS_CHANGE))
+        {
+            stateManager->setListState(State::LIST_REQUIRE_UPDATE);
+        }
+    }
+    else
+    {
+        stateManager->setConnectionState(State::DISCONNECTED);
+    }
+}
+
 void Communicator::receiveList()
 {
     Serial.flush();

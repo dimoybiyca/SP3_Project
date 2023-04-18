@@ -35,13 +35,19 @@ void loop()
   while (stateManager->getConnectionState() == State::DISCONNECTED)
   {
     communicator->establishConnection();
+    display->showLogo();
   }
 
-  if (millis() - ListenerCnt > 60000 || stateManager->getListState() == State::LIST_EMPTHY)
+  if (millis() - ListenerCnt > 5000)
   {
-    communicator->receiveList();
+    communicator->checkState();
 
     ListenerCnt = millis();
+  }
+
+  if (stateManager->getListState() == State::LIST_REQUIRE_UPDATE || stateManager->getListState() == State::LIST_EMPTHY)
+  {
+    communicator->receiveList();
   }
 
   if (millis() - ButtonCnt > 100)

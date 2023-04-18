@@ -56,6 +56,14 @@ public:
     void establishConnection();
 
     /**
+     * @brief Check if the state of Arduino is actual
+     *
+     * Send command to arduino to get know if the state of list or project
+     * was changed from external
+     */
+    void checkState();
+
+    /**
      * @brief Receive list from PC
      *
      * Send command to PC to get response with list of projects
@@ -99,6 +107,7 @@ enum class Commands
     LAUNCH_RPOJECT = 2222,   /**<command to launch project*/
     REBOOT_PROJECT = 3333,   /**<command to reboot active project*/
     STOP_PROJECT = 4444,     /**<command to stop active project*/
+    CHECK_STATE = 5555,      /**<command to check the state*/
     GET_LIST = 9999          /**<command to get list*/
 };
 
@@ -109,7 +118,8 @@ enum class Commands
  */
 enum class Codes
 {
-    OK = 200 /**Everything is OK*/
+    OK = 200,        /**<Everything is OK*/
+    WAS_CHANGE = 300 /**<Something changed*/
 };
 
 #endif
