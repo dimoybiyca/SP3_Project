@@ -3,11 +3,12 @@ package ua.lpnu.ngdeck.services.serial;
 import jssc.SerialPort;
 import jssc.SerialPortException;
 import jssc.SerialPortList;
-import ua.lpnu.ngdeck.config.ConfigService;
+import lombok.extern.log4j.Log4j2;
 
 import java.util.Arrays;
 import java.util.List;
 
+@Log4j2
 public class ConnectionMonitor extends Thread {
 
     private String port;
@@ -16,6 +17,7 @@ public class ConnectionMonitor extends Thread {
 
     @Override
     public void run() {
+        log.info("ConnectionMonitor thread start");
         while (true) {
             try {
                 this.checkConnection();
@@ -32,6 +34,7 @@ public class ConnectionMonitor extends Thread {
     }
 
     public SerialPort getSerialPort() {
+        log.trace("getSerialPort call");
         try {
             while (!isConnected) {
                 Thread.sleep(100);
@@ -46,11 +49,8 @@ public class ConnectionMonitor extends Thread {
         return port;
     }
 
-    public boolean isConnected() {
-        return isConnected;
-    }
-
     private void findPort() {
+        log.trace("findPort call");
         if(!isConnected) {
             List<String> ports = getPorts();
 
@@ -64,13 +64,15 @@ public class ConnectionMonitor extends Thread {
                     if (this.port != null) {
                         break;
                     }
-                } catch (SerialPortException | InterruptedException ignored) {
+                } catch (SerialPortException | InterruptedException e) {
+                    log.error(e);
                 }
             }
         }
     }
 
     private void checkConnection() {
+        log.trace("Check connection call");
         boolean isOpen = false;
         boolean isPortExist = false;
 
@@ -83,14 +85,18 @@ public class ConnectionMonitor extends Thread {
         }
 
         this.isConnected = isOpen && isPortExist;
+        log.trace("is port active: {}", this.isConnected);
     }
 
     private void checkPort(String port) throws SerialPortException, InterruptedException {
+        log.trace("checkPort call");
         this.initPort();
         Thread.sleep(2500);
 
         String read = serialPort.readString();
+        log.trace("Got '{}' from {}", read, port);
         if(read != null && read.startsWith("1111")) {
+            log.trace("port was found");
             this.port = port;
         }
     }

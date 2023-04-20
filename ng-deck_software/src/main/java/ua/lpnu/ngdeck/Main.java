@@ -1,7 +1,7 @@
 package ua.lpnu.ngdeck;
 
 import ua.lpnu.ngdeck.services.projects.ProjectService;
-import ua.lpnu.ngdeck.services.serial.SerialService;
+import ua.lpnu.ngdeck.services.serial.SerialManager;
 
 public class Main {
 
@@ -9,6 +9,6 @@ public class Main {
 
         ProjectService projectService = ProjectService.getInstance();
 
-        SerialService serialService = new SerialService();
+        new SerialManager().start();
     }
 }

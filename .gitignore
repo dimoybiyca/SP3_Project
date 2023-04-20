@@ -31,3 +31,5 @@
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
+*/logs/*
+*/ng-desk_hardware/docs/*

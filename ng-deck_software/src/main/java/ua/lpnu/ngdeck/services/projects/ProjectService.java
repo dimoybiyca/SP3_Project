@@ -1,11 +1,13 @@
 package ua.lpnu.ngdeck.services.projects;
 
+import lombok.extern.log4j.Log4j2;
 import ua.lpnu.ngdeck.config.ConfigService;
 import ua.lpnu.ngdeck.models.Project;
 
 import java.io.File;
 import java.util.List;
 
+@Log4j2
 public class ProjectService {
     private static ProjectService projectServiceSingleton;
 
@@ -38,13 +40,17 @@ public class ProjectService {
     }
 
     public void checkList() {
+        log.trace("checkList call");
         if(projectsMonitor.isChanged()) {
             List<File> newProjects = ProjectUtils.getProjects(configService.getDirectoriesToWatch());
             listChanged = !newProjects.equals(projects);
+            log.trace("is list of projects changed: {}", listChanged);
 
             if(listChanged) {
                 projects = newProjects;
             }
+
+            projectsMonitor.isActual();
         }
     }
 

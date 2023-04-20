@@ -4,6 +4,8 @@ import jssc.SerialPort;
 import jssc.SerialPortEvent;
 import jssc.SerialPortEventListener;
 import jssc.SerialPortException;
+import lombok.extern.log4j.Log4j2;
+
 import ua.lpnu.ngdeck.data.Codes;
 import ua.lpnu.ngdeck.data.Commands;
 import ua.lpnu.ngdeck.models.Project;
@@ -13,9 +15,10 @@ import ua.lpnu.ngdeck.services.projects.ProjectUtils;
 
 import java.util.List;
 
+@Log4j2
 public class PortReader implements SerialPortEventListener {
 
-    private  SerialPort serialPort;
+    private final SerialPort serialPort;
     private final ProjectService projectService;
     private final AngularService angularService;
 
@@ -30,7 +33,7 @@ public class PortReader implements SerialPortEventListener {
         if (event.isRXCHAR() && event.getEventValue() > 0) {
             try {
                 String receivedData = serialPort.readString(event.getEventValue());
-                System.out.println("Received: " + receivedData);
+                log.trace("Received {}", receivedData);
 
                 if(receivedData.startsWith(Commands.LAUNCH_PROJECT)) {
                    startProject(receivedData);
@@ -58,9 +61,10 @@ public class PortReader implements SerialPortEventListener {
     }
 
     private void startProject(String receivedData) {
+        log.trace("startProject call");
         String projectName = receivedData.substring(4);
         Project project = projectService.getProjects().stream()
-                .filter(p -> p.getName().equals(projectName))
+                .filter(p -> p.getName().startsWith(projectName))
                 .findFirst()
                 .orElse(null);
 
@@ -68,6 +72,7 @@ public class PortReader implements SerialPortEventListener {
     }
 
     private void sendList() throws InterruptedException {
+        log.trace("sendList call");
         List<Project> projectList = projectService.getProjects();
         this.send(projectList.size() + ",");
         this.send(ProjectUtils.formatToSend(projectList));
@@ -75,14 +80,16 @@ public class PortReader implements SerialPortEventListener {
     }
 
     private void sendCode(int code) {
+        log.trace("sendCode call");
         this.send(String.valueOf(code));
     }
 
     private void send(String message) {
+        log.trace("Send {}", message);
         try {
             serialPort.writeString(message);
-            System.out.println("Send: " + message);
         } catch (SerialPortException e) {
+            log.error("Serial Port exception", e);
             throw new RuntimeException(e);
         }
     }
