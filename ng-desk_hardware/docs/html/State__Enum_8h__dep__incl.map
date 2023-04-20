@@ -1,9 +1,9 @@
 <map id="include/State_Enum.h" name="include/State_Enum.h">
-<area shape="rect" id="node1" title="Enum of program states." alt="" coords="73,5,223,31"/>
-<area shape="rect" id="node2" href="$StateManager_8h.html" title="program state manager" alt="" coords="69,79,227,104"/>
-<area shape="rect" id="node3" href="$Communicator_8h.html" title="communicate with PC via Serial" alt="" coords="67,225,229,251"/>
-<area shape="rect" id="node4" href="$ButtonsProcessor_8h.html" title="Handle buttons." alt="" coords="5,299,171,339"/>
-<area shape="rect" id="node5" href="$List_8h.html" title="Contains and manipulate list of projects This class contains an array of Strigns which is an projects..." alt="" coords="247,152,345,177"/>
-<area shape="rect" id="node6" href="$JoyProcessor_8h.html" title="Handle joystick." alt="" coords="253,225,464,251"/>
-<area shape="rect" id="node7" href="$Display_8h.html" title="Wrapper for Arduino I2C display." alt="" coords="488,225,608,251"/>
+<area shape="rect" id="node1" title="Enum of program states." alt="" coords="107,5,258,31"/>
+<area shape="rect" id="node2" href="$StateManager_8h.html" title="program state manager" alt="" coords="103,79,262,104"/>
+<area shape="rect" id="node3" href="$Communicator_8h.html" title="communicate with PC via Serial" alt="" coords="101,225,264,251"/>
+<area shape="rect" id="node4" href="$ButtonsProcessor_8h.html" title="Handle buttons." alt="" coords="5,299,240,324"/>
+<area shape="rect" id="node5" href="$List_8h.html" title="Contains and manipulate list of projects This class contains an array of Strigns which is an projects..." alt="" coords="281,152,380,177"/>
+<area shape="rect" id="node6" href="$JoyProcessor_8h.html" title="Handle joystick." alt="" coords="288,225,499,251"/>
+<area shape="rect" id="node7" href="$Display_8h.html" title="Wrapper for Arduino I2C display." alt="" coords="523,225,643,251"/>
 </map>

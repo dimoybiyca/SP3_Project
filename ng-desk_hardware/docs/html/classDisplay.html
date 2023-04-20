@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -21,9 +25,8 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ng-deck<span id="projectnumber">&#160;1.0.0</span>
+   <div id="projectname">ng-deck
    </div>
-   <div id="projectbrief">Angular web server manager</div>
   </td>
  </tr>
  </tbody>
@@ -47,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classDisplay.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -68,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -85,12 +104,8 @@ $(function() {
 <div class="dynheader">
 Collaboration diagram for Display:</div>
 <div class="dyncontent">
-<div class="center"><img src="classDisplay__coll__graph.png" border="0" usemap="#aDisplay_coll__map" alt="Collaboration graph"/></div>
-<map name="aDisplay_coll__map" id="aDisplay_coll__map">
-<area shape="rect" title=" " alt="" coords="53,593,187,817"/>
-<area shape="rect" href="classList.html" title=" " alt="" coords="175,321,321,531"/>
-<area shape="rect" href="classStateManager.html" title=" " alt="" coords="5,5,163,259"/>
-</map>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classDisplay__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -147,7 +162,10 @@ Static Private Attributes</h2></td></tr>
 <tr class="memitem:af346cceaf18a4ea478cebe0ee61ee78e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classDisplay.html">Display</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDisplay.html#af346cceaf18a4ea478cebe0ee61ee78e">_display</a></td></tr>
 <tr class="separator:af346cceaf18a4ea478cebe0ee61ee78e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="Display_8h_source.html#l00018">18</a> of file <a class="el" href="Display_8h_source.html">Display.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ae972fffea6f7ca1d627ef48c3d841bb3" name="ae972fffea6f7ca1d627ef48c3d841bb3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae972fffea6f7ca1d627ef48c3d841bb3">&#9670;&#160;</a></span>Display()</h2>
 
@@ -425,6 +443,8 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>static field to store himself for singleton </p>
 
+<p class="definition">Definition at line <a class="el" href="Display_8h_source.html#l00021">21</a> of file <a class="el" href="Display_8h_source.html">Display.h</a>.</p>
+
 </div>
 </div>
 <a id="a3fc974e10b11c066150b1ac90c31cfd4" name="a3fc974e10b11c066150b1ac90c31cfd4"></a>
@@ -447,6 +467,8 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>reference to stateManager </p>
+
+<p class="definition">Definition at line <a class="el" href="Display_8h_source.html#l00025">25</a> of file <a class="el" href="Display_8h_source.html">Display.h</a>.</p>
 
 </div>
 </div>
@@ -471,6 +493,8 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>LiquidCrystal_I2C object </p>
 
+<p class="definition">Definition at line <a class="el" href="Display_8h_source.html#l00022">22</a> of file <a class="el" href="Display_8h_source.html">Display.h</a>.</p>
+
 </div>
 </div>
 <a id="a61eb1e5881238d92069a79e7279653f4" name="a61eb1e5881238d92069a79e7279653f4"></a>
@@ -492,6 +516,8 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Display_8h_source.html#l00023">23</a> of file <a class="el" href="Display_8h_source.html">Display.h</a>.</p>
 
 </div>
 </div>
@@ -516,6 +542,8 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>first row of display which is now on the display </p>
 
+<p class="definition">Definition at line <a class="el" href="Display_8h_source.html#l00026">26</a> of file <a class="el" href="Display_8h_source.html">Display.h</a>.</p>
+
 </div>
 </div>
 <a id="ab87d5c2492f5ba807c60ef762b545d9c" name="ab87d5c2492f5ba807c60ef762b545d9c"></a>
@@ -539,15 +567,21 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>reference to list </p>
 
+<p class="definition">Definition at line <a class="el" href="Display_8h_source.html#l00024">24</a> of file <a class="el" href="Display_8h_source.html">Display.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="Display_8h_source.html">Display.h</a></li>
+<li>include/<a class="el" href="Display_8h_source.html">Display.h</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classDisplay.html">Display</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

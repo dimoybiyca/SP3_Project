@@ -5,10 +5,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ng-deck: List.h File Reference</title>
+<title>ng-deck: include/List.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -21,9 +25,8 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ng-deck<span id="projectnumber">&#160;1.0.0</span>
+   <div id="projectname">ng-deck
    </div>
-   <div id="projectbrief">Angular web server manager</div>
   </td>
  </tr>
  </tbody>
@@ -47,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('List_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -68,11 +88,6 @@ $(function() {
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
@@ -88,25 +103,13 @@ $(function() {
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for List.h:</div>
 <div class="dyncontent">
-<div class="center"><img src="List_8h__incl.png" border="0" usemap="#aList_8h" alt=""/></div>
-<map name="aList_8h" id="aList_8h">
-<area shape="rect" title="Contains and manipulate list of projects This class contains an array of Strigns which is an projects..." alt="" coords="41,5,140,31"/>
-<area shape="rect" title=" " alt="" coords="5,152,83,177"/>
-<area shape="rect" href="StateManager_8h.html" title="program state manager" alt="" coords="82,79,195,104"/>
-<area shape="rect" href="State__Enum_8h.html" title="Enum of program states." alt="" coords="107,152,213,177"/>
-</map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="List_8h__incl.svg" width="219" height="183"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="List_8h__dep__incl.png" border="0" usemap="#aList_8hdep" alt=""/></div>
-<map name="aList_8hdep" id="aList_8hdep">
-<area shape="rect" title="Contains and manipulate list of projects This class contains an array of Strigns which is an projects..." alt="" coords="249,5,348,31"/>
-<area shape="rect" href="Communicator_8h.html" title="communicate with PC via Serial" alt="" coords="7,79,169,104"/>
-<area shape="rect" href="JoyProcessor_8h.html" title="Handle joystick." alt="" coords="193,79,404,104"/>
-<area shape="rect" href="Display_8h.html" title="Wrapper for Arduino I2C display." alt="" coords="428,79,548,104"/>
-<area shape="rect" href="ButtonsProcessor_8h.html" title="Handle buttons." alt="" coords="5,152,171,192"/>
-</map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="List_8h__dep__incl.svg" width="588" height="183"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 </div>
 <p><a href="List_8h_source.html">Go to the source code of this file.</a></p>
@@ -123,6 +126,8 @@ Macros</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Contains and manipulate list of projects This class contains an array of Strigns which is an projects received from Service and allows to get projects to output on display. </p>
+
+<p class="definition">Definition in file <a class="el" href="List_8h_source.html">List.h</a>.</p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="af6381825ddcaef499d49dc4bd06aa4d3" name="af6381825ddcaef499d49dc4bd06aa4d3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af6381825ddcaef499d49dc4bd06aa4d3">&#9670;&#160;</a></span>LIST_H</h2>
@@ -136,12 +141,18 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="List_8h_source.html#l00007">7</a> of file <a class="el" href="List_8h_source.html">List.h</a>.</p>
+
 </div>
 </div>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="List_8h.html">List.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
 </body>
 </html>

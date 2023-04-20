@@ -1,6 +1,7 @@
 var classCommunicator =
 [
     [ "Communicator", "classCommunicator.html#abd4c26c6a901e571bc9cfc4259e65de3", null ],
+    [ "checkState", "classCommunicator.html#a1c048ea7bb268c9c988e4149d471359b", null ],
     [ "establishConnection", "classCommunicator.html#a533a3a9cc24af61f711e889f78b64014", null ],
     [ "getInstance", "classCommunicator.html#a2a58e51227bc3afb217dda318cfd73c1", null ],
     [ "initSerial", "classCommunicator.html#a174629fc784454781666f1abae5ee1ea", null ],

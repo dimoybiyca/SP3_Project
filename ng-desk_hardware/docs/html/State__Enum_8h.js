@@ -5,6 +5,7 @@ var State__Enum_8h =
       [ "DISCONNECTED", "State__Enum_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8a99c8ce56e7ab246445d3b134724428f3", null ],
       [ "LIST_EMPTHY", "State__Enum_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8a967de3146c056baa462e480059dcc0b0", null ],
       [ "LIST_CHANGED", "State__Enum_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8aa94c65a021a5667ca9b48d407932feef", null ],
+      [ "LIST_REQUIRE_UPDATE", "State__Enum_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8a498c31f8db9135be35b68626fcaa5901", null ],
       [ "LIST_ACTUAL", "State__Enum_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8afa18e66923af6794f48138c854760efa", null ],
       [ "PROJECT_NONE", "State__Enum_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8ac028e0bf1c5d9854a49c92c6d6f2646a", null ],
       [ "PROJECT_SELECTED", "State__Enum_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8aaa83133ed3222eda431ab6767cb64421", null ],
