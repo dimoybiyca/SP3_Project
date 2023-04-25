@@ -8,7 +8,6 @@ import java.io.File;
 @Getter
 @Setter
 @EqualsAndHashCode
-@ToString
 public class Project {
     private String name;
     private String path;

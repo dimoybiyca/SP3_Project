@@ -5,6 +5,7 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.stream.JsonReader;
 import lombok.extern.log4j.Log4j2;
+
 import ua.lpnu.ngdeck.models.Config;
 import ua.lpnu.ngdeck.models.Project;
 
@@ -38,6 +39,8 @@ public class ConfigService {
     }
 
     public Project getProject(String name){
+        this.readConfig();
+
         return Arrays.stream(getConfig().getProjects())
                 .filter(project -> Objects.equals(project.getName(), name))
                 .findFirst()
@@ -45,10 +48,6 @@ public class ConfigService {
     }
 
     public Config getConfig() {
-        if(config == null) {
-            readConfig();
-        }
-
         return config;
     }
 
@@ -60,17 +59,13 @@ public class ConfigService {
             writer.flush();
             writer.close();
         } catch (IOException e) {
-            log.error("Error creating config {}", e);
+            log.error("Error creating config", e);
             throw new RuntimeException(e);
         }
     }
 
     private void readConfig(){
         log.info("Read config");
-
-        if(!configFile.exists()) {
-            this.createConfig();
-        }
 
         try {
             JsonReader reader = new JsonReader(new FileReader(configFile));

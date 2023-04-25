@@ -19,7 +19,6 @@ public class AngularService {
         return angularServiceSingleton;
     }
 
-
     public void start(Project project) {
         log.info("start call");
         this.activeProject = project;

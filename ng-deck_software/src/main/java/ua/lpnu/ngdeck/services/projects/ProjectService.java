@@ -1,11 +1,12 @@
 package ua.lpnu.ngdeck.services.projects;
 
-import lombok.extern.log4j.Log4j2;
-import ua.lpnu.ngdeck.config.ConfigService;
-import ua.lpnu.ngdeck.models.Project;
 
 import java.io.File;
 import java.util.List;
+import lombok.extern.log4j.Log4j2;
+
+import ua.lpnu.ngdeck.config.ConfigService;
+import ua.lpnu.ngdeck.models.Project;
 
 @Log4j2
 public class ProjectService {
