@@ -20,10 +20,10 @@ class Display
 private:
     static Display *_display;   /**<static field to store himself for singleton*/
     LiquidCrystal_I2C lcd;      /**<LiquidCrystal_I2C object*/
-    List *list;                 /**reference to list*/
-    StateManager *stateManager; /**reference to stateManager*/
-    String firstRow;            /**first row of display which is now on the display*/
-    String secondRow;           /**second row of display which is now on the display*/
+    List *list;                 /**<reference to list*/
+    StateManager *stateManager; /**<reference to stateManager*/
+    String firstRow;            /**<first row of display which is now on the display*/
+    String secondRow;           /**<second row of display which is now on the display*/
 
     /**
      * @brief Construct a new Display object
