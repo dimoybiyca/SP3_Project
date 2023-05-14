@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import ua.lpnu.ngdeck.services.projects.FilesMonitor;
 
-public class FilesMonitorTest {
+public class  FilesMonitorTest {
 
     FilesMonitor filesMonitor = new FilesMonitor();
 
