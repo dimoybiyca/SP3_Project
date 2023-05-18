@@ -53,11 +53,9 @@ public class ConfigService {
 
     private void createConfig(){
         log.info("Create default config");
-        try {
-            Writer writer = new FileWriter(configFile.getPath());
-            gson.toJson(Config.defaultConfig(), writer);
-            writer.flush();
-            writer.close();
+        try (Writer writer = new FileWriter(configFile.getPath())) {
+                gson.toJson(Config.defaultConfig(), writer);
+                writer.flush();
         } catch (IOException e) {
             log.error("Error creating config", e);
             throw new RuntimeException(e);
@@ -67,9 +65,9 @@ public class ConfigService {
     private void readConfig(){
         log.info("Read config");
 
-        try {
-            JsonReader reader = new JsonReader(new FileReader(configFile));
-            config = gson.fromJson(reader, Config.class);
+        try (JsonReader reader = new JsonReader(new FileReader(configFile))) {
+                config = gson.fromJson(reader, Config.class);
+
         } catch (FileNotFoundException e) {
             log.error("Config doesnt exist", e);
             config = Config.defaultConfig();
@@ -78,6 +76,9 @@ public class ConfigService {
             log.error("Invalid syntax of config file", e);
             config = Config.defaultConfig();
             createConfig();
+        } catch (IOException e) {
+            log.error("Cant access to filesystem");
+            throw new RuntimeException(e);
         }
     }
 }
