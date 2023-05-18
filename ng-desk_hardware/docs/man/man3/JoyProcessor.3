@@ -1,0 +1,106 @@
+.TH "JoyProcessor" 3 "Sun Apr 9 2023" "ng-deck" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+JoyProcessor
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBJoyProcessor\fP ()"
+.br
+.RI "Construct a new Joy Processor object\&. "
+.ti -1c
+.RI "void \fBprocess\fP ()"
+.br
+.RI "Handle direction of joystick\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBcheckState\fP ()"
+.br
+.RI "read and return actual state of joy "
+.ti -1c
+.RI "bool \fBisChanged\fP ()"
+.br
+.RI "return whether joystic state has changed "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBList\fP * \fBlist\fP"
+.br
+.ti -1c
+.RI "int \fBjoy\fP"
+.br
+.ti -1c
+.RI "int \fBpreviousJoy\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line \fB16\fP of file \fBJoyProcessor\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "JoyProcessor::JoyProcessor ()"
+
+.PP
+Construct a new Joy Processor object\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "int JoyProcessor::checkState ()\fC [private]\fP"
+
+.PP
+read and return actual state of joy 
+.PP
+\fBReturns\fP
+.RS 4
+1 if joystick was directed upwards 
+.PP
+0 if joystick is in the center 
+.PP
+-1 if joystick was directed downwards 
+.RE
+.PP
+
+.SS "bool JoyProcessor::isChanged ()\fC [private]\fP"
+
+.PP
+return whether joystic state has changed 
+.PP
+\fBReturns\fP
+.RS 4
+true if it was changed 
+.PP
+false if it wasnt changer 
+.RE
+.PP
+
+.SS "void JoyProcessor::process ()"
+
+.PP
+Handle direction of joystick\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "int JoyProcessor::joy\fC [private]\fP"
+current state of joystick 1 - up 0 - center -1 - down 
+.PP
+Definition at line \fB20\fP of file \fBJoyProcessor\&.h\fP\&.
+.SS "\fBList\fP* JoyProcessor::list\fC [private]\fP"
+\fBList\fP reference 
+.PP
+Definition at line \fB19\fP of file \fBJoyProcessor\&.h\fP\&.
+.SS "int JoyProcessor::previousJoy\fC [private]\fP"
+previous state of joystick 
+.PP
+Definition at line \fB21\fP of file \fBJoyProcessor\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ng-deck from the source code\&.

@@ -1,0 +1,7 @@
+<map id="ButtonsProcessor" name="ButtonsProcessor">
+<area shape="rect" id="node1" title=" " alt="" coords="340,880,519,1016"/>
+<area shape="rect" id="node2" href="$classStateManager.html" title=" " alt="" coords="5,5,320,259"/>
+<area shape="rect" id="node3" href="$classCommunicator.html" title=" " alt="" coords="89,593,333,803"/>
+<area shape="rect" id="node4" href="$classList.html" title=" " alt="" coords="275,321,525,531"/>
+<area shape="rect" id="node5" href="$classButton.html" title=" " alt="" coords="553,608,685,788"/>
+</map>

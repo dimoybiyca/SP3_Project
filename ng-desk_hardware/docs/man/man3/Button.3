@@ -1,0 +1,121 @@
+.TH "Button" 3 "Sun Apr 9 2023" "ng-deck" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Button
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBButton\fP ()"
+.br
+.RI "Construct a new \fBButton\fP object\&. "
+.ti -1c
+.RI "void \fBinit\fP (int \fBpin\fP)"
+.br
+.RI "Initialize button\&. "
+.ti -1c
+.RI "bool \fBgetState\fP ()"
+.br
+.RI "Get the State object\&. "
+.ti -1c
+.RI "bool \fBisChanged\fP ()"
+.br
+.RI "returns whether the state of the button has changed "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBpin\fP"
+.br
+.ti -1c
+.RI "int \fBcurrentValue\fP"
+.br
+.ti -1c
+.RI "int \fBpreviousValue\fP"
+.br
+.ti -1c
+.RI "int \fBpreviousState\fP"
+.br
+.ti -1c
+.RI "int \fBstate\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line \fB14\fP of file \fBButton\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Button::Button ()"
+
+.PP
+Construct a new \fBButton\fP object\&. current state of button  
+.SH "Member Function Documentation"
+.PP 
+.SS "bool Button::getState ()"
+
+.PP
+Get the State object\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if button is activeted 
+.PP
+false if button is deactivated 
+.RE
+.PP
+
+.SS "void Button::init (int pin)"
+
+.PP
+Initialize button\&. Set pin where button is connected to read 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpin\fP pin of button 
+.RE
+.PP
+
+.SS "bool Button::isChanged ()"
+
+.PP
+returns whether the state of the button has changed 
+.PP
+\fBReturns\fP
+.RS 4
+true if button state changed 
+.PP
+false if button state doesn't changed 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "int Button::currentValue\fC [private]\fP"
+current value of button 
+.PP
+Definition at line \fB18\fP of file \fBButton\&.h\fP\&.
+.SS "int Button::pin\fC [private]\fP"
+pin where the button is connected 
+.PP
+Definition at line \fB17\fP of file \fBButton\&.h\fP\&.
+.SS "int Button::previousState\fC [private]\fP"
+previous state of button 
+.PP
+Definition at line \fB20\fP of file \fBButton\&.h\fP\&.
+.SS "int Button::previousValue\fC [private]\fP"
+previous value of button 
+.PP
+Definition at line \fB19\fP of file \fBButton\&.h\fP\&.
+.SS "int Button::state\fC [private]\fP"
+
+.PP
+Definition at line \fB21\fP of file \fBButton\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ng-deck from the source code\&.

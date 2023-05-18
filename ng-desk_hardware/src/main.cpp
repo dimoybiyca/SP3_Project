@@ -1,89 +1,77 @@
 #include <Arduino.h>
-#include "Init.h"
 #include "Display.h"
-#include "Button.h"
+#include "StateManager.h"
+#include "Communicator.h"
+#include "Controls/JoyProcessor.h"
+#include "Controls/ButtonsProcessor.h"
 
-int buttonStartPin = 6;
-int buttonStopPin = 7;
-Display display;
-Button buttonStart;
-Button buttonStop;
+Display *display;
+StateManager *stateManager;
+Communicator *communicator;
+
+JoyProcessor joyProcessor;
+ButtonsProcessor buttonsProcessor;
+
 unsigned long ButtonCnt = millis();
 unsigned long ListenerCnt = millis();
-int joy = 0;
-String list[20];
-int size = 0;
 
 void setup()
 {
-  initSerial(9600);
-  display = Display();
-  display.init();
+  communicator = Communicator::getInstance();
+  stateManager = StateManager::getInstance();
+  display = Display::getInstance();
+  joyProcessor = JoyProcessor();
+  buttonsProcessor = ButtonsProcessor();
 
-  buttonStart.init(buttonStartPin);
-  buttonStop.init(buttonStopPin);
+  communicator->initSerial(9600);
+  display->init();
+  buttonsProcessor.initButtons();
 }
 
 void loop()
 {
 
+  // If there is no connection to PC, execute untill establish
+  while (stateManager->getConnectionState() == State::DISCONNECTED)
+  {
+    communicator->establishConnection();
+    display->showLogo();
+  }
+
+  if (millis() - ListenerCnt > 5000)
+  {
+    communicator->checkState();
+
+    ListenerCnt = millis();
+  }
+
+  if (stateManager->getListState() == State::LIST_REQUIRE_UPDATE || stateManager->getListState() == State::LIST_EMPTHY)
+  {
+    communicator->receiveList();
+  }
+
   if (millis() - ButtonCnt > 100)
   {
-    if (buttonStop.isChanged())
+    if (stateManager->getListState() != State::LIST_EMPTHY)
     {
-      bool state = buttonStop.getState();
-      if (state)
+      if (stateManager->getProjectState() != State::PROJECT_ACTIVE)
       {
-        display.getLCD().clear();
-        display.print("Active");
-        Serial.print("1");
+        joyProcessor.process();
       }
-      else
+
+      if (stateManager->getProjectState() == State::PROJECT_ACTIVE)
       {
-        display.getLCD().clear();
-        for (int i = 0; i < 2; i++)
-        {
-          display.getLCD().setCursor(0, i);
-          display.print(list[i]);
-        }
-
-        Serial.print("0");
+        display->showActive();
       }
-    }
 
-    int current = analogRead(A1);
-    if (current > 900 && joy != 1)
-    {
-      joy = 1;
-    }
-    else if (current < 100 && joy != -1)
-    {
-      joy = -1;
-    }
-    else if (current > 400 && current < 600)
-    {
-      joy = 0;
+      if (stateManager->getListState() == State::LIST_CHANGED)
+      {
+        display->showList();
+      }
+
+      buttonsProcessor.process();
     }
 
     ButtonCnt = millis();
-  }
-
-  if (millis() - ListenerCnt > 10000)
-  {
-    Serial.print("900");
-    String sizeStr = Serial.readStringUntil(',');
-
-    if (sizeStr.length() > 0)
-    {
-      size = sizeStr.toInt();
-
-      for (int i = 0; i < size; i++)
-      {
-        list[i] = Serial.readStringUntil(',');
-      }
-    }
-    ListenerCnt = millis();
-
-    delay(1000);
   }
 }

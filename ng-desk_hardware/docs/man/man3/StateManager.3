@@ -1,0 +1,219 @@
+.TH "StateManager" 3 "Sun Apr 9 2023" "ng-deck" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+StateManager
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBState\fP \fBgetConnectionState\fP ()"
+.br
+.RI "Get the Connection State object\&. "
+.ti -1c
+.RI "void \fBsetConnectionState\fP (\fBState\fP \fBconnectionState\fP)"
+.br
+.RI "Set the Connection State object\&. "
+.ti -1c
+.RI "\fBState\fP \fBgetProjectState\fP ()"
+.br
+.RI "Get the Project State object\&. "
+.ti -1c
+.RI "void \fBsetProjectState\fP (\fBState\fP \fBprojectState\fP)"
+.br
+.RI "Set the Project State object\&. "
+.ti -1c
+.RI "\fBState\fP \fBgetListState\fP ()"
+.br
+.RI "Get the \fBList\fP State object\&. "
+.ti -1c
+.RI "void \fBsetListState\fP (\fBState\fP \fBlistState\fP)"
+.br
+.RI "Set the \fBList\fP State object\&. "
+.ti -1c
+.RI "String \fBgetActiveProject\fP ()"
+.br
+.RI "Get the Active Project object\&. "
+.ti -1c
+.RI "void \fBsetActiveProject\fP (String project)"
+.br
+.RI "Set the Active Project object\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBStateManager\fP * \fBgetInstance\fP ()"
+.br
+.RI "Get the Instance object\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBStateManager\fP ()"
+.br
+.RI "Construct a new State Manager object\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBState\fP \fBconnectionState\fP"
+.br
+.ti -1c
+.RI "\fBState\fP \fBlistState\fP"
+.br
+.ti -1c
+.RI "\fBState\fP \fBprojectState\fP"
+.br
+.ti -1c
+.RI "String \fBactiveProject\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static \fBStateManager\fP * \fB_stateManager\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line \fB15\fP of file \fBStateManager\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "StateManager::StateManager ()\fC [private]\fP"
+
+.PP
+Construct a new State Manager object\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "String StateManager::getActiveProject ()"
+
+.PP
+Get the Active Project object\&. 
+.PP
+\fBReturns\fP
+.RS 4
+String current active project 
+.RE
+.PP
+
+.SS "\fBState\fP StateManager::getConnectionState ()"
+
+.PP
+Get the Connection State object\&. 
+.PP
+\fBReturns\fP
+.RS 4
+State current state of connection 
+.RE
+.PP
+
+.SS "static \fBStateManager\fP * StateManager::getInstance ()\fC [static]\fP"
+
+.PP
+Get the Instance object\&. Singleton pattern method to get instance of class 
+.PP
+\fBReturns\fP
+.RS 4
+StateManager* single instance of class \fBStateManager\fP 
+.RE
+.PP
+
+.SS "\fBState\fP StateManager::getListState ()"
+
+.PP
+Get the \fBList\fP State object\&. 
+.PP
+\fBReturns\fP
+.RS 4
+State current state of list on display 
+.RE
+.PP
+
+.SS "\fBState\fP StateManager::getProjectState ()"
+
+.PP
+Get the Project State object\&. 
+.PP
+\fBReturns\fP
+.RS 4
+State current state of project 
+.RE
+.PP
+
+.SS "void StateManager::setActiveProject (String project)"
+
+.PP
+Set the Active Project object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject\fP name of project to set as active 
+.RE
+.PP
+
+.SS "void StateManager::setConnectionState (\fBState\fP connectionState)"
+
+.PP
+Set the Connection State object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIconnectionState\fP state of connection with PC 
+.RE
+.PP
+
+.SS "void StateManager::setListState (\fBState\fP listState)"
+
+.PP
+Set the \fBList\fP State object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlistState\fP state of list 
+.RE
+.PP
+
+.SS "void StateManager::setProjectState (\fBState\fP projectState)"
+
+.PP
+Set the Project State object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIprojectState\fP state of project 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBStateManager\fP* StateManager::_stateManager\fC [static]\fP, \fC [private]\fP"
+static field to store himself for singleton 
+.PP
+Definition at line \fB18\fP of file \fBStateManager\&.h\fP\&.
+.SS "String StateManager::activeProject\fC [private]\fP"
+current active project 
+.PP
+Definition at line \fB22\fP of file \fBStateManager\&.h\fP\&.
+.SS "\fBState\fP StateManager::connectionState\fC [private]\fP"
+state of connection to PC 
+.PP
+Definition at line \fB19\fP of file \fBStateManager\&.h\fP\&.
+.SS "\fBState\fP StateManager::listState\fC [private]\fP"
+state of list 
+.PP
+Definition at line \fB20\fP of file \fBStateManager\&.h\fP\&.
+.SS "\fBState\fP StateManager::projectState\fC [private]\fP"
+state of project 
+.PP
+Definition at line \fB21\fP of file \fBStateManager\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ng-deck from the source code\&.

@@ -1,0 +1,182 @@
+.TH "List" 3 "Sun Apr 9 2023" "ng-deck" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+List
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetProjects\fP (String \fBlist\fP[], int \fBsize\fP)"
+.br
+.RI "Set the Projects Array\&. "
+.ti -1c
+.RI "void \fBmoveUp\fP ()"
+.br
+.RI "Downcrease offset\&. "
+.ti -1c
+.RI "void \fBmoveDown\fP ()"
+.br
+.RI "Increase offset\&. "
+.ti -1c
+.RI "String \fBgetFirstProject\fP ()"
+.br
+.RI "Get the First Project\&. "
+.ti -1c
+.RI "String \fBgetSecondProject\fP ()"
+.br
+.RI "Get the Second Project\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBList\fP * \fBgetInstance\fP ()"
+.br
+.RI "Get the Instance object\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBList\fP ()"
+.br
+.RI "Construct a new \fBList\fP object\&. "
+.ti -1c
+.RI "String \fBgetProject\fP (int index)"
+.br
+.RI "Get the Project object\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBStateManager\fP * \fBstateManager\fP"
+.br
+.ti -1c
+.RI "int \fBsize\fP"
+.br
+.ti -1c
+.RI "int \fBoffset\fP"
+.br
+.ti -1c
+.RI "String \fBlist\fP [20]"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static \fBList\fP * \fB_list\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line \fB16\fP of file \fBList\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "List::List ()\fC [private]\fP"
+
+.PP
+Construct a new \fBList\fP object\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "String List::getFirstProject ()"
+
+.PP
+Get the First Project\&. Return the first project to output on display by index offset 
+.PP
+\fBReturns\fP
+.RS 4
+String project name 
+.RE
+.PP
+
+.SS "static \fBList\fP * List::getInstance ()\fC [static]\fP"
+
+.PP
+Get the Instance object\&. Singleton pattern method to get instance of class 
+.PP
+\fBReturns\fP
+.RS 4
+List* single instance of class \fBList\fP 
+.RE
+.PP
+
+.SS "String List::getProject (int index)\fC [private]\fP"
+
+.PP
+Get the Project object\&. Return the project from list by index 
+.PP
+\fBParameters\fP
+.RS 4
+\fIindex\fP index of project in array 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+String project name 
+.RE
+.PP
+
+.SS "String List::getSecondProject ()"
+
+.PP
+Get the Second Project\&. Return the first project to output on display by index offset + 1 or String '==== END ====' if end of list 
+.PP
+\fBReturns\fP
+.RS 4
+String project name 
+.RE
+.PP
+
+.SS "void List::moveDown ()"
+
+.PP
+Increase offset\&. Increase offset to move list down\&. Needed to simulate movement through the menu 
+.SS "void List::moveUp ()"
+
+.PP
+Downcrease offset\&. Downcrease offset to move list up\&.Needed to simulate movement through the menu 
+.SS "void List::setProjects (String list[], int size)"
+
+.PP
+Set the Projects Array\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlist\fP array of strings with projects 
+.br
+\fIsize\fP size of given array 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBList\fP* List::_list\fC [static]\fP, \fC [private]\fP"
+static field to store himself for singleton 
+.PP
+Definition at line \fB19\fP of file \fBList\&.h\fP\&.
+.SS "String List::list[20]\fC [private]\fP"
+array of projects 
+.PP
+Definition at line \fB23\fP of file \fBList\&.h\fP\&.
+.SS "int List::offset\fC [private]\fP"
+how many projects skip from start to output 
+.PP
+Definition at line \fB22\fP of file \fBList\&.h\fP\&.
+.SS "int List::size\fC [private]\fP"
+amount of projects in array 
+.PP
+Definition at line \fB21\fP of file \fBList\&.h\fP\&.
+.SS "\fBStateManager\fP* List::stateManager\fC [private]\fP"
+stateManager reference 
+.PP
+Definition at line \fB20\fP of file \fBList\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ng-deck from the source code\&.

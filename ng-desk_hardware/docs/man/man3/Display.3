@@ -1,0 +1,187 @@
+.TH "Display" 3 "Sun Apr 9 2023" "ng-deck" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Display
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinit\fP ()"
+.br
+.RI "Initialize the display\&. "
+.ti -1c
+.RI "void \fBshowLogo\fP ()"
+.br
+.RI "Print logo on display\&. "
+.ti -1c
+.RI "void \fBshowList\fP ()"
+.br
+.RI "print list of projects on display "
+.ti -1c
+.RI "void \fBshowActive\fP ()"
+.br
+.RI "print current active project "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBDisplay\fP * \fBgetInstance\fP ()"
+.br
+.RI "Get the Instance object\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDisplay\fP ()"
+.br
+.RI "Construct a new \fBDisplay\fP object\&. "
+.ti -1c
+.RI "void \fBprint\fP (String text, uint8_t column, uint8_t row)"
+.br
+.RI "print text on display "
+.ti -1c
+.RI "void \fBprintFirstRow\fP (String text)"
+.br
+.RI "print text on first row of display "
+.ti -1c
+.RI "void \fBprintSecondRow\fP (String text)"
+.br
+.RI "print text on second row of display "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "LiquidCrystal_I2C \fBlcd\fP"
+.br
+.ti -1c
+.RI "\fBList\fP * \fBlist\fP"
+.br
+.ti -1c
+.RI "\fBStateManager\fP * \fBstateManager\fP"
+.br
+.ti -1c
+.RI "String \fBfirstRow\fP"
+.br
+.ti -1c
+.RI "String \fBsecondRow\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static \fBDisplay\fP * \fB_display\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line \fB18\fP of file \fBDisplay\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Display::Display ()\fC [private]\fP"
+
+.PP
+Construct a new \fBDisplay\fP object\&. second row of display which is now on the display  
+.SH "Member Function Documentation"
+.PP 
+.SS "static \fBDisplay\fP * Display::getInstance ()\fC [static]\fP"
+
+.PP
+Get the Instance object\&. Singleton pattern method to get instance of class 
+.PP
+\fBReturns\fP
+.RS 4
+Display* single instance of class \fBDisplay\fP 
+.RE
+.PP
+
+.SS "void Display::init ()"
+
+.PP
+Initialize the display\&. Set the address of display on i2c bus and turn on backlight 
+.SS "void Display::print (String text, uint8_t column, uint8_t row)\fC [private]\fP"
+
+.PP
+print text on display Print String on display on current position 
+.PP
+\fBParameters\fP
+.RS 4
+\fItext\fP text to print 
+.br
+\fIcolumn\fP position where to print by horizontal 
+.br
+\fIrow\fP position where to print by vertical 
+.RE
+.PP
+
+.SS "void Display::printFirstRow (String text)\fC [private]\fP"
+
+.PP
+print text on first row of display Print text on first row of display\&. Compare it with cuurent and print only if it is different to prevent redundant blinking 
+.PP
+\fBParameters\fP
+.RS 4
+\fItext\fP text to print on display 
+.RE
+.PP
+
+.SS "void Display::printSecondRow (String text)\fC [private]\fP"
+
+.PP
+print text on second row of display Print text on first second of display\&. Compare it with cuurent and print only if it is different to prevent redundant blinking 
+.PP
+\fBParameters\fP
+.RS 4
+\fItext\fP text to print on display 
+.RE
+.PP
+
+.SS "void Display::showActive ()"
+
+.PP
+print current active project 
+.SS "void Display::showList ()"
+
+.PP
+print list of projects on display 
+.SS "void Display::showLogo ()"
+
+.PP
+Print logo on display\&. \fBDisplay\fP hello logo on display while loading and establishing connection 
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBDisplay\fP* Display::_display\fC [static]\fP, \fC [private]\fP"
+static field to store himself for singleton 
+.PP
+Definition at line \fB21\fP of file \fBDisplay\&.h\fP\&.
+.SS "String Display::firstRow\fC [private]\fP"
+reference to stateManager 
+.PP
+Definition at line \fB25\fP of file \fBDisplay\&.h\fP\&.
+.SS "LiquidCrystal_I2C Display::lcd\fC [private]\fP"
+LiquidCrystal_I2C object 
+.PP
+Definition at line \fB22\fP of file \fBDisplay\&.h\fP\&.
+.SS "\fBList\fP* Display::list\fC [private]\fP"
+
+.PP
+Definition at line \fB23\fP of file \fBDisplay\&.h\fP\&.
+.SS "String Display::secondRow\fC [private]\fP"
+first row of display which is now on the display 
+.PP
+Definition at line \fB26\fP of file \fBDisplay\&.h\fP\&.
+.SS "\fBStateManager\fP* Display::stateManager\fC [private]\fP"
+reference to list 
+.PP
+Definition at line \fB24\fP of file \fBDisplay\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ng-deck from the source code\&.
